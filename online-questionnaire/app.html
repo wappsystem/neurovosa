@@ -1,0 +1,307 @@
+<div id=D__ID module=app>
+    <!-- special font, css etc for this app -->
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
+    <!-------->
+    <div id=components style='display:none'>
+        <div id=c_header>
+            <div class=vm-mobile>
+                <span id=vm-mobile-title class=vm-mobile-title>Questionnaire</span>
+                <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class=vm-desk-logo>
+                <span id=vm-logo-label-A>Wappsystem</span><br>
+                <span id=vm-logo-label-B>Spardac Questionnaire Portal</span>
+            </div>
+            <div id="vm-menu">
+                <a id=vm_signout onclick=$vm.nav_signout()><i class="fa fa-user"></i> Sign Out</a>
+            </div>
+        </div>
+        <div id=c_footer>
+            <span id=text_0></span>
+        </div>
+    </div>
+    <script main-code>
+        //------------------------------------
+        //database service address
+        $vm.api_address="https://api.wappsystem.com";
+        if(window.location.toString().indexOf('_p=1')!=-1) $vm.api_address="https://api.wappsystem.com:3000";
+        //------------------------------------
+        //Set your default web page title and footer text
+        $vm.default_title="Spardac Online Questionnaire";
+        //var txt="Key Alt+mouse double click on a content area will show the source code of the content module and where it is hosted. ";
+        var txt="Copyright © "+(new Date()).getFullYear()+", Wappsystem Pty Ltd";
+        $('#text_0').html(txt);
+        //------------------------------------
+        $('#c_header').contents().appendTo('#header');
+        $('#c_footer').contents().appendTo('#footer');
+        //------------------------------------
+        $('#vm-mobile_title').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
+        $('.vm-desk-logo').on('click',function(){ $vm.load_module('home',$vm.root_layout_content_slot,{}) })
+        //------------------------------------
+        $vm.root_layout_content_slot='content'
+        $vm.root_layout_footer='footer';
+        //---------------------------------------------
+        var set_layout=function(){
+            var header_height=$('#header').outerHeight(); $vm.header_height=header_height;
+            var footer_height=$('#footer').outerHeight(); $vm.footer_height=footer_height;
+            $vm.min_height=($(window).height()-header_height-footer_height);
+            if($vm.active_id!=undefined){
+                $('#D'+$vm.active_id).css('height',($('body').height()-$('#header').outerHeight()-$('#footer').outerHeight())+"px");
+            }
+        }
+        //------------------------------------
+        set_layout();
+        //-----------------------------------------
+        $vm.show=function(m_name){
+            document.title=$vm.default_title;
+            $("meta[name='description']").attr("content", "A single page application with shared reusable modules distributed on different static web servers around the world and maintained by different people with different skills!");
+            $("body").removeClass();
+            $("body").addClass('body_background_default');
+            
+            $vm.active_id=undefined;
+            if(m_name!=undefined) $vm.active_id=$vm.module_list[m_name].id;
+            if(m_name!=undefined && $vm.module_list[m_name].show!=undefined) $vm.module_list[m_name].show();
+            if($vm.active_id!=undefined){
+                $('#D'+$vm.active_id).css('overflow','auto');
+                $('#D'+$vm.active_id).css('min-height','unset');
+                $('#D'+$vm.active_id).css('height',($('body').height()-$('#header').outerHeight()-$('#footer').outerHeight())+"px");
+            }
+        }
+        //------------------------------------
+        $vm.show();
+        window.onresize=function(){set_layout();}
+        //------------------------------------
+        $vm.start=function(){
+            $vm.init(function(){
+               $vm.init_status=1;
+               $vm.show_user();
+           })
+        }
+        //------------------------------------
+    </script>
+    <style main-style>
+        :root {
+            --menu-color: #fff;
+            --menu-hover-color: #29eca6;
+            --menu-hover-background-color: #555;
+
+            --dropdown-menu-color:#666;
+            --dropdown-menu-background-color:#f9f9f9;
+            --dropdown-menu-hover-color:#555;
+            --dropdown-menu-hover-background-color:#ddd;
+            --dropdown-menu-border-color:#ddd;
+
+            --mobile-title-color:#fff;
+            --mobile-hamburger-color:#fff;
+            --mobile-menu-background-color:#1c3144;
+        }
+        html,body{ margin:0; padding:0; height:100%; font-family:Arial;}
+        body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
+        .body_background_default{ background-image: url(https://image.vmiis.com/bk031.jpg);}
+        #content{
+        }
+        #vm-logo-label-A{
+            font-family: Arial, sans-serif;
+            color:#fff;
+            font-size: 200%;
+            line-height:10px;
+            display:inline-block;
+        }
+        #vm-logo-label-B{
+            font-family: Arial, sans-serif;
+            color:#fff;
+            font-size: 93%;
+            line-height:80%;
+            display:inline-block;
+        }
+        #footer{
+            height:24px;
+            color: #fff;
+            padding: 3px;
+            background-color: #333;
+            font:80%/18px arial;
+            text-align: center;
+        }
+        /*----------------------*/
+        #header{height:100px;background:rgba(0,0,0,0.6);}
+        .vm-desk-logo{ display:inline-block;float:left;padding:36px 30px 0 30px;cursor:pointer;}
+        #vm-menu{ float:left;padding:50px 30px 0 30px;}
+        @media screen and (max-width: 1200px){
+            #header{height:50px;}
+            .vm-desk-logo{display:none;}
+            #vm-menu{padding:0;}
+        }
+        /*----------------------*/
+    </style>
+    <script menu-code>
+        //------------------------------------
+        $('.vm-dropdown').on('click',function(e){
+            var d=$(this).find('.vm-dropdown-content');
+            if(d.css('display')=='block') d.css('display','none');
+            else d.css('display','block');
+        })
+        $(".vm-dropdown").mouseleave(function (){  $(".vm-dropdown-content").hide();  })
+        $(".vm-dropdown-content").mouseleave(function (){  $(this).hide();  })
+        $vm.toggle=function() {
+            var x = document.getElementById("vm-menu");
+            if(x.className==='') x.className="responsive";
+            else x.className="";
+        }
+        //------------------------------------
+        $('#vm-menu a').on('click',function(e){
+            e.preventDefault();
+            var href=$(this).attr('href');
+            if(href!=undefined && href!='' && href.substring(0,8)=="https://"){ window.open(href); return;}
+            if(href!=undefined && href!=''){
+                if($vm.menu_click!=undefined) $vm.menu_click(href);
+            }
+            $vm.toggle();
+        })
+        //------------------------------------
+        $vm.menu_click=function(href){
+            href=href.replace('?\/','');
+            href=href.replace(/\//g,'_');
+            $vm.load_module(href,$vm.root_layout_content_slot,{});
+        }
+        //------------------------------------
+    </script>
+    <style menu-style>
+        /*menu*/
+        #vm-menu {
+            overflow: hidden;
+            display:inline-block;
+            float:left;
+        }
+        #vm-menu > a {
+            color:var(--menu-color);
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor:pointer;
+        }
+        .vm-dropbtn {
+            color:var(--menu-color);
+            display: block;
+            font-size: 14px;
+            padding: 10px 8px;
+            background-color: inherit;
+            font-family: inherit;
+            cursor:pointer;
+        }
+        .vm-dropdown {
+            color:var(--menu-color);
+            float: left;
+            overflow: hidden;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .vm-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dropdown-menu-background-color);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 100;
+            max-height: 1000px;
+            overflow-y: hidden;
+            border-radius: 0px 3px 3px 3px;
+            animation: vm-menu-show 1.8s;
+        }
+        .vm-dropdown-content a {
+            float: none;
+            font-size: 14px;
+            color: var(--dropdown-menu-color)!important;
+            padding: 3px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            cursor:pointer;
+            border-bottom:1px solid var(--dropdown-menu-border-color);
+        }
+        #vm-menu > a:hover, .vm-dropdown:hover .vm-dropbtn {
+          background-color:var(--menu-hover-background-color);
+          color:var(--menu-hover-color);
+          border-radius:4px;
+        }
+        .vm-dropdown-content a:hover {
+            background-color: var(--dropdown-menu-hover-background-color);
+            color: var(--dropdown-menu-hover-color);
+            text-decoration: none;
+        }
+        .vm-hide{
+            display:none!Important;
+        }
+        .vm-mobile{
+            display:none;
+        }
+        /*----------------------*/
+        @media screen and (max-width: 1200px) {
+            .vm-mobile{
+                display:block;
+            }
+            .vm-mobile-title{
+                color:var(--mobile-title-color);
+                font-size: 28px;
+                display:inline-block;
+                padding: 3px 0 3px 12px;
+                cursor: pointer;
+            }
+            #vm-hamburger_button{
+                float: right;
+                display: block;
+                font-size:28px;
+                padding:5px 16px 3px 16px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                cursor:pointer;
+                color:var(--mobile-hamburger-color);
+            }
+            #vm-menu {
+                width:100%;
+                margin-top:0px;
+                margin-right:0px;
+                margin-left:0px;
+                padding-left:15px;
+                padding-right:15px;
+                overflow: hidden;
+                background: var(--mobile-menu-background-color);
+                display:block;
+                float:unset;
+            }
+            #vm-menu a, .vm-dropdown .vm-dropbtn {
+                display: none;
+            }
+            #vm-menu.responsive {
+                position: relative;
+                animation: vm-menu-show 1.8s;
+                z-index: 100;
+            }
+            #vm-menu.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            #vm-menu.responsive .vm-dropdown {float: none;}
+            #vm-menu.responsive .vm-dropdown-content {position: relative;}
+            #vm-menu.responsive .vm-dropdown .vm-dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+            .vm-mobile{
+                display:block;
+            }
+        }
+        @keyframes vm-menu-show {
+            from {max-height: 0px;}
+            to {max-height: 1000px;}
+        }
+    </style>
+</div>

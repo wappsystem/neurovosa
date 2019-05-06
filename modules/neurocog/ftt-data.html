@@ -1,0 +1,19 @@
+<section>
+        VmInclude:__CURRENT_PATH__/../../grid.v1h.html
+      </section>
+      <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js
+            VmInclude:__CURRENT_PATH__/../../shared-data.js
+            //-------------------------------------
+            $('#title__ID').text('Finger Tapping Task')
+            //-------------------------------------
+            var fields="Speed_1,Speed_2,Speed_3,Speed_4,Speed_5,Speed_6,Accuracy_1,Accuracy_2,Accuracy_3,Accuracy_4,Accuracy_1,Accuracy_6,Tapping_Time,Match,Sequence_Number,Tapping_Time,Match,Sequence_Number";
+            m.fields="_Form,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
+        }
+      </script>
+      <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+      </style>

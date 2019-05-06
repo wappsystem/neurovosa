@@ -1,0 +1,115 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3>Mood</h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Participant</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>xxxx xxxxx :</h4>
+                </fieldset>
+              </div>
+              <!-- form group -->
+              <div class="form-group">
+                <h4>How is you ....</h4>
+                <div class="row">
+                  <div class="col-sm-2 control-group text-left">
+                    <label><span>bad ??</span></label>
+                  </div>
+                  <div class="col-sm-8 control-group">
+                    <div class="questiongroup ">
+                      <fieldset class="subquestions">
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="1" required>
+                          <span class="checkmark no-dot">1</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="2">
+                          <span class="checkmark no-dot">2</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="3">
+                          <span class="checkmark no-dot">3</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="4">
+                          <span class="checkmark no-dot">4</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="5">
+                          <span class="checkmark no-dot">5</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="6">
+                          <span class="checkmark no-dot">6</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="7">
+                          <span class="checkmark no-dot">7</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="8">
+                          <span class="checkmark no-dot">8</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="9">
+                          <span class="checkmark no-dot">9</span>
+                        </label><br>
+                        <label class="radiobuttons">
+                          <input type="radio" name="mood" value="10">
+                          <span class="checkmark no-dot">10</span>
+                        </label>
+                      </fieldset>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="col-sm-2 control-group">
+                    <label><span>good??</span></label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      VmInclude: '__COMPONENT__/f/form.01.js'
+      VmInclude: __CURRENT_PATH__/shared-form.js
+      //-------------------------------------
+    }
+  </script>
+  <style>
+    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    
+    #D__ID .mt-95 {
+      max-width: 600px;
+    }
+
+    #D__ID .radiobuttons {
+      padding-left: 15px;
+    }
+  </style>
+</div>

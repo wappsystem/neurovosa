@@ -1,0 +1,612 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3>PSG Extraction</h3>
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <label><span class="">Extraction of data from Compumedics PSG300.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="row px-4">
+                                    <div class="col-sm-12 col-lg-9 ">
+                                        <span class=label__ID>Participant</span><br>
+                                        <input type=text name="Participant" class=form-control id=Participant__ID
+                                            data-id="Participant" />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Participant ID</span><br>
+                                        <input type=text name="Participant_uid" class=form-control readonly />
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- form group -->
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>File</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <br>
+                                        <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                                        <button type="button" id=x_File_Name__ID>Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Date of Birth</span><input class='form-control' type='text' name='Date_of_Birth' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Gender</span><input class='form-control' type='text' name='Gender' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >MRN</span><input class='form-control' type='text' name='MRN' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Study Date</span><input class='form-control' type='text' name='Study_Date' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Study Start Time</span><input class='form-control' type='text' name='Study_Start_Time' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Study End Time</span><input class='form-control' type='text' name='Study_End_Time' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Time in Bed (min)</span><input class='form-control' type='text' name='Time_in_Bed_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Sleep Latency (min)</span><input class='form-control' type='text' name='Sleep_Latency_min' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >REM Latency (min)</span><input class='form-control' type='text' name='REM_Latency_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Sleep Efficiency (%)</span><input class='form-control' type='text' name='Sleep_Efficiency_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Time Awake During Sleep Period (min)</span><input class='form-control' type='text' name='Total_Time_Awake_During_Sleep_Period_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Sleep Time (min)</span><input class='form-control' type='text' name='Total_Sleep_Time_min' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >NREM (min)</span><input class='form-control' type='text' name='NREM_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >NREM %</span><input class='form-control' type='text' name='NREM_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >REM (min)</span><input class='form-control' type='text' name='REM_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >REM %</span><input class='form-control' type='text' name='REM_pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 1 (min)</span><input class='form-control' type='text' name='Stage_1_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 1 %</span><input class='form-control' type='text' name='Stage_1_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 2 (min)</span><input class='form-control' type='text' name='Stage_2_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 2 %</span><input class='form-control' type='text' name='Stage_2_pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 3 (min)</span><input class='form-control' type='text' name='Stage_3_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 3 %</span><input class='form-control' type='text' name='Stage_3_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 4 (min)</span><input class='form-control' type='text' name='Stage_4_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Stage 4 %</span><input class='form-control' type='text' name='Stage_4_pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Unsure sleep stage (min)</span><input class='form-control' type='text' name='Unsure_sleep_stage_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Number of Arousals</span><input class='form-control' type='text' name='Total_Number_of_Arousals' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of ARO RES Arousal 1</span><input class='form-control' type='text' name='Number_of_ARO_RES_Arousal_1' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of ARO Limb Arousal 2</span><input class='form-control' type='text' name='Number_of_ARO_Limb_Arousal_2' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of ARO SPONT Arousal 3</span><input class='form-control' type='text' name='Number_of_ARO_SPONT_Arousal_3' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of  Arousal 4</span><input class='form-control' type='text' name='Number_of__Arousal_4' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of  Arousal 5</span><input class='form-control' type='text' name='Number_of__Arousal_5' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Arousal Index TST (p/hr)</span><input class='form-control' type='text' name='Total_Arousal_Index_TST_p_hr' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO RES Arousal 1 Index TST (p/hr)</span><input class='form-control' type='text' name='ARO_RES_Arousal_1_Index_TST_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO Limb Arousal 2 Index TST (p/hr)</span><input class='form-control' type='text' name='ARO_Limb_Arousal_2_Index_TST_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO SPONT Arousal 3 Index TST (p/hr)</span><input class='form-control' type='text' name='ARO_SPONT_Arousal_3_Index_TST_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 4 Index TST (p/hr)</span><input class='form-control' type='text' name='Arousal_4_Index_TST_p_hr' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 5 Index TST (p/hr)</span><input class='form-control' type='text' name='Arousal_5_Index_TST_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Arousal Index in REM (p/hr)</span><input class='form-control' type='text' name='Total_Arousal_Index_in_REM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO RES Arousal 1 Index in REM (p/hr)</span><input class='form-control' type='text' name='ARO_RES_Arousal_1_Index_in_REM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO Limb Arousal 2 Index in REM (p/hr)</span><input class='form-control' type='text' name='ARO_Limb_Arousal_2_Index_in_REM_p_hr' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO SPONT Arousal 3 Index in REM (p/hr)</span><input class='form-control' type='text' name='ARO_SPONT_Arousal_3_Index_in_REM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 4 Index in REM (p/hr)</span><input class='form-control' type='text' name='Arousal_4_Index_in_REM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 5 Index in REM (p/hr)</span><input class='form-control' type='text' name='Arousal_5_Index_in_REM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total Arousal Index in NREM (p/hr)</span><input class='form-control' type='text' name='Total_Arousal_Index_in_NREM_p_hr' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO RES Arousal 1 Index in NREM (p/hr)</span><input class='form-control' type='text' name='ARO_RES_Arousal_1_Index_in_NREM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO Limb Arousal 2 Index in NREM (p/hr)</span><input class='form-control' type='text' name='ARO_Limb_Arousal_2_Index_in_NREM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ARO SPONT Arousal 3 Index in NREM (p/hr)</span><input class='form-control' type='text' name='ARO_SPONT_Arousal_3_Index_in_NREM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 4 Index in NREM (p/hr)</span><input class='form-control' type='text' name='Arousal_4_Index_in_NREM_p_hr' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Arousal 5 Index in NREM (p/hr)</span><input class='form-control' type='text' name='Arousal_5_Index_in_NREM_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Central Apnea Average duration (sec)</span><input class='form-control' type='text' name='Central_Apnea_Average_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Central Apnea Total duration (min)</span><input class='form-control' type='text' name='Central_Apnea_Total_duration_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Central Apnea Total Number</span><input class='form-control' type='text' name='Central_Apnea_Total_Number' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Central Apnea Index (p/hr)</span><input class='form-control' type='text' name='Central_Apnea_Index_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Obstructive Apnea Average duration (sec)</span><input class='form-control' type='text' name='Obstructive_Apnea_Average_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Obstructive Apnea Total duration (min)</span><input class='form-control' type='text' name='Obstructive_Apnea_Total_duration_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Obstructive Apnea Total Number</span><input class='form-control' type='text' name='Obstructive_Apnea_Total_Number' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Obstructive Apnea Index (p/hr)</span><input class='form-control' type='text' name='Obstructive_Apnea_Index_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Hypopnea Average duration (sec)</span><input class='form-control' type='text' name='Hypopnea_Average_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Hypopnea Total duration (min)</span><input class='form-control' type='text' name='Hypopnea_Total_duration_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Hypopnea Total Number</span><input class='form-control' type='text' name='Hypopnea_Total_Number' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Hypopnea Index (p/hr)</span><input class='form-control' type='text' name='Hypopnea_Index_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Chicago Hypopnea Average duration (sec)</span><input class='form-control' type='text' name='Chicago_Hypopnea_Average_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Chicago Hypopnea Total duration (min)</span><input class='form-control' type='text' name='Chicago_Hypopnea_Total_duration_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Chicago Hypopnea Total Number</span><input class='form-control' type='text' name='Chicago_Hypopnea_Total_Number' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Chicago Hypopnea Index (p/hr)</span><input class='form-control' type='text' name='Chicago_Hypopnea_Index_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Apnea + Hypopnea Average duration (sec)</span><input class='form-control' type='text' name='Apnea_+_Hypopnea_Average_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Apnea + Hypopnea Total duration (min)</span><input class='form-control' type='text' name='Apnea_+_Hypopnea_Total_duration_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Apnea + Hypopnea Total Number</span><input class='form-control' type='text' name='Apnea_+_Hypopnea_Total_Number' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Apnea + Hypopnea Index (p/hr)</span><input class='form-control' type='text' name='Apnea_+_Hypopnea_Index_p_hr' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in back position (NREM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in other position (NREM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in all position (NREM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in back position (REM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in other position (REM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% min average in all position (REM)</span><input class='form-control' type='text' name='SaO2pct_min_average_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in back position (NREM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in other position (NREM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in all position (NREM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in back position (REM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in other position (REM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2% lowest in all position (REM)</span><input class='form-control' type='text' name='SaO2pct_lowest_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Chicago Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Chicago_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Central Apnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Central_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Obstructive Apnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Obstructive_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Mixed Apnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Mixed_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total duration (min) Apnea + Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Total_duration_min_Apnea_+_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Chicago Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Chicago_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Central Apnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Central_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Obstructive Apnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Obstructive_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Mixed Apnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Mixed_Apnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_back_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_all_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_other_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in back position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_back_position_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in other position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_other_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in all position (NREM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_all_position_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in back position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_back_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in other position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_other_position_REM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Index (p/hr) Apnea + Hypopnea in all position (REM)</span><input class='form-control' type='text' name='Index_p_hr_Apnea_+_Hypopnea_in_all_position_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Sleep Time in back (min)</span><input class='form-control' type='text' name='Sleep_Time_in_back_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Sleep Time in non-back (min)</span><input class='form-control' type='text' name='Sleep_Time_in_non-back_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Time in REM on back (min)</span><input class='form-control' type='text' name='Time_in_REM_on_back_min' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Time in NREM on back (min)</span><input class='form-control' type='text' name='Time_in_NREM_on_back_min' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Supine NREM RDI</span><input class='form-control' type='text' name='Supine_NREM_RDI' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Supine REM RDI</span><input class='form-control' type='text' name='Supine_REM_RDI' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Non-supine NREM RDI</span><input class='form-control' type='text' name='Non-supine_NREM_RDI' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Non-supine REM RDI</span><input class='form-control' type='text' name='Non-supine_REM_RDI' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >NREM RDI</span><input class='form-control' type='text' name='NREM_RDI' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >REM RDI</span><input class='form-control' type='text' name='REM_RDI' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >TOTAL RDI</span><input class='form-control' type='text' name='TOTAL_RDI' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Total RDI without Chicago Hypopneas</span><input class='form-control' type='text' name='Total_RDI_without_Chicago_Hypopneas' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Minimum SaO2 desaturation (%)</span><input class='form-control' type='text' name='Minimum_SaO2_desaturation_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 awake average (%)</span><input class='form-control' type='text' name='SaO2_awake_average_pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Average SaO2 desaturation (%)</span><input class='form-control' type='text' name='Average_SaO2_desaturation_pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Mean Apnea / Hypopnea duration (sec)</span><input class='form-control' type='text' name='Mean_Apnea_/_Hypopnea_duration_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Longest Apnea (sec)</span><input class='form-control' type='text' name='Longest_Apnea_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Longest Hypopnea (sec)</span><input class='form-control' type='text' name='Longest_Hypopnea_sec' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 time below 90%</span><input class='form-control' type='text' name='SaO2_time_below_90pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 time below 80%</span><input class='form-control' type='text' name='SaO2_time_below_80pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 time below 75%</span><input class='form-control' type='text' name='SaO2_time_below_75pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 time below 70%</span><input class='form-control' type='text' name='SaO2_time_below_70pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >SaO2 time below 60%</span><input class='form-control' type='text' name='SaO2_time_below_60pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of SaO2 desaturations greater than or equal to 3%</span><input class='form-control' type='text' name='Num_SaO2_desat_ge_3pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of SaO2 desaturations greater than or equal to 4%</span><input class='form-control' type='text' name='Num_SaO2_desat_ge_4pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of SaO2 desaturations greater than or equal to 5%</span><input class='form-control' type='text' name='Num_SaO2_desat_ge_5pct' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >ODI (>=3%)</span><input class='form-control' type='text' name='ODI_ge_3pct' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of PLMs NREM</span><input class='form-control' type='text' name='Number_of_PLMs_NREM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of PLMs REM</span><input class='form-control' type='text' name='Number_of_PLMs_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >Number of PLM Total Sleep</span><input class='form-control' type='text' name='Number_of_PLM_Total_Sleep' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >PLM Index NREM</span><input class='form-control' type='text' name='PLM_Index_NREM' /></label></div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >PLM Index REM</span><input class='form-control' type='text' name='PLM_Index_REM' /></label></div>
+                                <div class='col-sm-12 col-lg-3'><label class=''><span class='' >PLM Index Total</span><input class='form-control' type='text' name='PLM_Index_Total' /></label></div>
+                            </div>
+                            <hr>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        //---------------------------------------------
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if (m.input.readonly != undefined) $('#submit__ID').hide();
+                //render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+                m.set_file_link("File_Name");
+            }
+            //-------------------------------------
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                if (this.files.length == 1) {
+                    file_process(this.files[0])
+                }
+            })
+            //-------------------------------------
+            var file_process = function (file) {
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    var contents = e.target.result;
+                    var lines = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+                    for (i = 0; i < lines.length; i++) {
+                        var row = lines[i].split(/=/);
+                        switch (row[0].trim()) {
+                            case 'Date of Birth': $('input[name="Date_of_Birth"]').val(row[1]);break;
+                            case 'Gender': $('input[name="Gender"]').val(row[1]);break;
+                            case 'MRN': $('input[name="MRN"]').val(row[1]);break;
+                            case 'Study Date': $('input[name="Study_Date"]').val(row[1]);break;
+                            case 'Study Start Time': $('input[name="Study_Start_Time"]').val(row[1]);break;
+                            case 'Study End Time': $('input[name="Study_End_Time"]').val(row[1]);break;
+                            case 'Time in Bed (min)': $('input[name="Time_in_Bed_min"]').val(row[1]);break;
+                            case 'Sleep Latency (min)': $('input[name="Sleep_Latency_min"]').val(row[1]);break;
+                            case 'REM Latency (min)': $('input[name="REM_Latency_min"]').val(row[1]);break;
+                            case 'Sleep Efficiency (%)': $('input[name="Sleep_Efficiency_pct"]').val(row[1]);break;
+                            case 'Total Time Awake During Sleep Period (min)': $('input[name="Total_Time_Awake_During_Sleep_Period_min"]').val(row[1]);break;
+                            case 'Total Sleep Time (min)': $('input[name="Total_Sleep_Time_min"]').val(row[1]);break;
+                            case 'NREM (min)': $('input[name="NREM_min"]').val(row[1]);break;
+                            case 'NREM %': $('input[name="NREM_pct"]').val(row[1]);break;
+                            case 'REM (min)': $('input[name="REM_min"]').val(row[1]);break;
+                            case 'REM %': $('input[name="REM_pct"]').val(row[1]);break;
+                            case 'Stage 1 (min)': $('input[name="Stage_1_min"]').val(row[1]);break;
+                            case 'Stage 1 %': $('input[name="Stage_1_pct"]').val(row[1]);break;
+                            case 'Stage 2 (min)': $('input[name="Stage_2_min"]').val(row[1]);break;
+                            case 'Stage 2 %': $('input[name="Stage_2_pct"]').val(row[1]);break;
+                            case 'Stage 3 (min)': $('input[name="Stage_3_min"]').val(row[1]);break;
+                            case 'Stage 3 %': $('input[name="Stage_3_pct"]').val(row[1]);break;
+                            case 'Stage 4 (min)': $('input[name="Stage_4_min"]').val(row[1]);break;
+                            case 'Stage 4 %': $('input[name="Stage_4_pct"]').val(row[1]);break;
+                            case 'Unsure sleep stage (min)': $('input[name="Unsure_sleep_stage_min"]').val(row[1]);break;
+                            case 'Total Number of Arousals': $('input[name="Total_Number_of_Arousals"]').val(row[1]);break;
+                            case 'Number of ARO RES Arousal 1': $('input[name="Number_of_ARO_RES_Arousal_1"]').val(row[1]);break;
+                            case 'Number of ARO Limb Arousal 2': $('input[name="Number_of_ARO_Limb_Arousal_2"]').val(row[1]);break;
+                            case 'Number of ARO SPONT Arousal 3': $('input[name="Number_of_ARO_SPONT_Arousal_3"]').val(row[1]);break;
+                            case 'Number of  Arousal 4': $('input[name="Number_of__Arousal_4"]').val(row[1]);break;
+                            case 'Number of  Arousal 5': $('input[name="Number_of__Arousal_5"]').val(row[1]);break;
+                            case 'Total Arousal Index TST (p/hr)': $('input[name="Total_Arousal_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'ARO RES Arousal 1 Index TST (p/hr)': $('input[name="ARO_RES_Arousal_1_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'ARO Limb Arousal 2 Index TST (p/hr)': $('input[name="ARO_Limb_Arousal_2_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'ARO SPONT Arousal 3 Index TST (p/hr)': $('input[name="ARO_SPONT_Arousal_3_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'Arousal 4 Index TST (p/hr)': $('input[name="Arousal_4_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'Arousal 5 Index TST (p/hr)': $('input[name="Arousal_5_Index_TST_p_hr"]').val(row[1]);break;
+                            case 'Total Arousal Index in REM (p/hr)': $('input[name="Total_Arousal_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'ARO RES Arousal 1 Index in REM (p/hr)': $('input[name="ARO_RES_Arousal_1_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'ARO Limb Arousal 2 Index in REM (p/hr)': $('input[name="ARO_Limb_Arousal_2_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'ARO SPONT Arousal 3 Index in REM (p/hr)': $('input[name="ARO_SPONT_Arousal_3_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'Arousal 4 Index in REM (p/hr)': $('input[name="Arousal_4_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'Arousal 5 Index in REM (p/hr)': $('input[name="Arousal_5_Index_in_REM_p_hr"]').val(row[1]);break;
+                            case 'Total Arousal Index in NREM (p/hr)': $('input[name="Total_Arousal_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'ARO RES Arousal 1 Index in NREM (p/hr)': $('input[name="ARO_RES_Arousal_1_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'ARO Limb Arousal 2 Index in NREM (p/hr)': $('input[name="ARO_Limb_Arousal_2_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'ARO SPONT Arousal 3 Index in NREM (p/hr)': $('input[name="ARO_SPONT_Arousal_3_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'Arousal 4 Index in NREM (p/hr)': $('input[name="Arousal_4_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'Arousal 5 Index in NREM (p/hr)': $('input[name="Arousal_5_Index_in_NREM_p_hr"]').val(row[1]);break;
+                            case 'Central Apnea Average duration (sec)': $('input[name="Central_Apnea_Average_duration_sec"]').val(row[1]);break;
+                            case 'Central Apnea Total duration (min)': $('input[name="Central_Apnea_Total_duration_min"]').val(row[1]);break;
+                            case 'Central Apnea Total Number': $('input[name="Central_Apnea_Total_Number"]').val(row[1]);break;
+                            case 'Central Apnea Index (p/hr)': $('input[name="Central_Apnea_Index_p_hr"]').val(row[1]);break;
+                            case 'Obstructive Apnea Average duration (sec)': $('input[name="Obstructive_Apnea_Average_duration_sec"]').val(row[1]);break;
+                            case 'Obstructive Apnea Total duration (min)': $('input[name="Obstructive_Apnea_Total_duration_min"]').val(row[1]);break;
+                            case 'Obstructive Apnea Total Number': $('input[name="Obstructive_Apnea_Total_Number"]').val(row[1]);break;
+                            case 'Obstructive Apnea Index (p/hr)': $('input[name="Obstructive_Apnea_Index_p_hr"]').val(row[1]);break;
+                            case 'Hypopnea Average duration (sec)': $('input[name="Hypopnea_Average_duration_sec"]').val(row[1]);break;
+                            case 'Hypopnea Total duration (min)': $('input[name="Hypopnea_Total_duration_min"]').val(row[1]);break;
+                            case 'Hypopnea Total Number': $('input[name="Hypopnea_Total_Number"]').val(row[1]);break;
+                            case 'Hypopnea Index (p/hr)': $('input[name="Hypopnea_Index_p_hr"]').val(row[1]);break;
+                            case 'Chicago Hypopnea Average duration (sec)': $('input[name="Chicago_Hypopnea_Average_duration_sec"]').val(row[1]);break;
+                            case 'Chicago Hypopnea Total duration (min)': $('input[name="Chicago_Hypopnea_Total_duration_min"]').val(row[1]);break;
+                            case 'Chicago Hypopnea Total Number': $('input[name="Chicago_Hypopnea_Total_Number"]').val(row[1]);break;
+                            case 'Chicago Hypopnea Index (p/hr)': $('input[name="Chicago_Hypopnea_Index_p_hr"]').val(row[1]);break;
+                            case 'Apnea + Hypopnea Average duration (sec)': $('input[name="Apnea_+_Hypopnea_Average_duration_sec"]').val(row[1]);break;
+                            case 'Apnea + Hypopnea Total duration (min)': $('input[name="Apnea_+_Hypopnea_Total_duration_min"]').val(row[1]);break;
+                            case 'Apnea + Hypopnea Total Number': $('input[name="Apnea_+_Hypopnea_Total_Number"]').val(row[1]);break;
+                            case 'Apnea + Hypopnea Index (p/hr)': $('input[name="Apnea_+_Hypopnea_Index_p_hr"]').val(row[1]);break;
+                            case 'SaO2% min average in back position (NREM)': $('input[name="SaO2pct_min_average_in_back_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% min average in other position (NREM)': $('input[name="SaO2pct_min_average_in_other_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% min average in all position (NREM)': $('input[name="SaO2pct_min_average_in_all_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% min average in back position (REM)': $('input[name="SaO2pct_min_average_in_back_position_REM"]').val(row[1]);break;
+                            case 'SaO2% min average in other position (REM)': $('input[name="SaO2pct_min_average_in_other_position_REM"]').val(row[1]);break;
+                            case 'SaO2% min average in all position (REM)': $('input[name="SaO2pct_min_average_in_all_position_REM"]').val(row[1]);break;
+                            case 'SaO2% lowest in back position (NREM)': $('input[name="SaO2pct_lowest_in_back_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% lowest in other position (NREM)': $('input[name="SaO2pct_lowest_in_other_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% lowest in all position (NREM)': $('input[name="SaO2pct_lowest_in_all_position_NREM"]').val(row[1]);break;
+                            case 'SaO2% lowest in back position (REM)': $('input[name="SaO2pct_lowest_in_back_position_REM"]').val(row[1]);break;
+                            case 'SaO2% lowest in other position (REM)': $('input[name="SaO2pct_lowest_in_other_position_REM"]').val(row[1]);break;
+                            case 'SaO2% lowest in all position (REM)': $('input[name="SaO2pct_lowest_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in back position (NREM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in other position (NREM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in all position (NREM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in back position (REM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in other position (REM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Chicago Hypopnea in all position (REM)': $('input[name="Total_duration_min_Chicago_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in back position (NREM)': $('input[name="Total_duration_min_Central_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in other position (NREM)': $('input[name="Total_duration_min_Central_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in all position (NREM)': $('input[name="Total_duration_min_Central_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in back position (REM)': $('input[name="Total_duration_min_Central_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in other position (REM)': $('input[name="Total_duration_min_Central_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Central Apnea in all position (REM)': $('input[name="Total_duration_min_Central_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in back position (NREM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in other position (NREM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in all position (NREM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in back position (REM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in other position (REM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Obstructive Apnea in all position (REM)': $('input[name="Total_duration_min_Obstructive_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in back position (NREM)': $('input[name="Total_duration_min_Mixed_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in other position (NREM)': $('input[name="Total_duration_min_Mixed_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in all position (NREM)': $('input[name="Total_duration_min_Mixed_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in back position (REM)': $('input[name="Total_duration_min_Mixed_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in other position (REM)': $('input[name="Total_duration_min_Mixed_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Mixed Apnea in all position (REM)': $('input[name="Total_duration_min_Mixed_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in back position (NREM)': $('input[name="Total_duration_min_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in other position (NREM)': $('input[name="Total_duration_min_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in all position (NREM)': $('input[name="Total_duration_min_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in back position (REM)': $('input[name="Total_duration_min_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in other position (REM)': $('input[name="Total_duration_min_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Hypopnea in all position (REM)': $('input[name="Total_duration_min_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in back position (NREM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in other position (NREM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in all position (NREM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in back position (REM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in other position (REM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Total duration (min) Apnea + Hypopnea in all position (REM)': $('input[name="Total_duration_min_Apnea_+_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in back position (NREM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in other position (NREM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in all position (NREM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in back position (REM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in other position (REM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Chicago Hypopnea in all position (REM)': $('input[name="Index_p_hr_Chicago_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in back position (NREM)': $('input[name="Index_p_hr_Central_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in other position (NREM)': $('input[name="Index_p_hr_Central_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in all position (NREM)': $('input[name="Index_p_hr_Central_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in back position (REM)': $('input[name="Index_p_hr_Central_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in other position (REM)': $('input[name="Index_p_hr_Central_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Central Apnea in all position (REM)': $('input[name="Index_p_hr_Central_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in back position (NREM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in other position (NREM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in all position (NREM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in back position (REM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in other position (REM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Obstructive Apnea in all position (REM)': $('input[name="Index_p_hr_Obstructive_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in back position (NREM)': $('input[name="Index_p_hr_Mixed_Apnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in other position (NREM)': $('input[name="Index_p_hr_Mixed_Apnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in all position (NREM)': $('input[name="Index_p_hr_Mixed_Apnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in back position (REM)': $('input[name="Index_p_hr_Mixed_Apnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in other position (REM)': $('input[name="Index_p_hr_Mixed_Apnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Mixed Apnea in all position (REM)': $('input[name="Index_p_hr_Mixed_Apnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in back position (NREM)': $('input[name="Index_p_hr_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in other position (NREM)': $('input[name="Index_p_hr_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in all position (NREM)': $('input[name="Index_p_hr_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in back position (REM)': $('input[name="Index_p_hr_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in other position (REM)': $('input[name="Index_p_hr_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Hypopnea in all position (REM)': $('input[name="Index_p_hr_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in back position (NREM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_back_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in other position (NREM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_other_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in all position (NREM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_all_position_NREM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in back position (REM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_back_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in other position (REM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_other_position_REM"]').val(row[1]);break;
+                            case 'Index (p/hr) Apnea + Hypopnea in all position (REM)': $('input[name="Index_p_hr_Apnea_+_Hypopnea_in_all_position_REM"]').val(row[1]);break;
+                            case 'Sleep Time in back (min)': $('input[name="Sleep_Time_in_back_min"]').val(row[1]);break;
+                            case 'Sleep Time in non-back (min)': $('input[name="Sleep_Time_in_non-back_min"]').val(row[1]);break;
+                            case 'Time in REM on back (min)': $('input[name="Time_in_REM_on_back_min"]').val(row[1]);break;
+                            case 'Time in NREM on back (min)': $('input[name="Time_in_NREM_on_back_min"]').val(row[1]);break;
+                            case 'Supine NREM RDI': $('input[name="Supine_NREM_RDI"]').val(row[1]);break;
+                            case 'Supine REM RDI': $('input[name="Supine_REM_RDI"]').val(row[1]);break;
+                            case 'Non-supine NREM RDI': $('input[name="Non-supine_NREM_RDI"]').val(row[1]);break;
+                            case 'Non-supine REM RDI': $('input[name="Non-supine_REM_RDI"]').val(row[1]);break;
+                            case 'NREM RDI': $('input[name="NREM_RDI"]').val(row[1]);break;
+                            case 'REM RDI': $('input[name="REM_RDI"]').val(row[1]);break;
+                            case 'TOTAL RDI': $('input[name="TOTAL_RDI"]').val(row[1]);break;
+                            case 'Total RDI without Chicago Hypopneas': $('input[name="Total_RDI_without_Chicago_Hypopneas"]').val(row[1]);break;
+                            case 'Minimum SaO2 desaturation (%)': $('input[name="Minimum_SaO2_desaturation_pct"]').val(row[1]);break;
+                            case 'SaO2 awake average (%)': $('input[name="SaO2_awake_average_pct"]').val(row[1]);break;
+                            case 'Average SaO2 desaturation (%)': $('input[name="Average_SaO2_desaturation_pct"]').val(row[1]);break;
+                            case 'Mean Apnea / Hypopnea duration (sec)': $('input[name="Mean_Apnea_/_Hypopnea_duration_sec"]').val(row[1]);break;
+                            case 'Longest Apnea (sec)': $('input[name="Longest_Apnea_sec"]').val(row[1]);break;
+                            case 'Longest Hypopnea (sec)': $('input[name="Longest_Hypopnea_sec"]').val(row[1]);break;
+                            case 'SaO2 time below 90%': $('input[name="SaO2_time_below_90pct"]').val(row[1]);break;
+                            case 'SaO2 time below 80%': $('input[name="SaO2_time_below_80pct"]').val(row[1]);break;
+                            case 'SaO2 time below 75%': $('input[name="SaO2_time_below_75pct"]').val(row[1]);break;
+                            case 'SaO2 time below 70%': $('input[name="SaO2_time_below_70pct"]').val(row[1]);break;
+                            case 'SaO2 time below 60%': $('input[name="SaO2_time_below_60pct"]').val(row[1]);break;
+                            case 'Number of SaO2 desaturations greater than or equal to 3%': $('input[name="Num_SaO2_desat_ge_3pct"]').val(row[1]);break;
+                            case 'Number of SaO2 desaturations greater than or equal to 4%': $('input[name="Num_SaO2_desat_ge_4pct"]').val(row[1]);break;
+                            case 'Number of SaO2 desaturations greater than or equal to 5%': $('input[name="Num_SaO2_desat_ge_5pct"]').val(row[1]);break;
+                            case 'ODI (>': $('input[name="ODI_ge_3pct"]').val(row[2]);break;
+                            case 'Number of PLMs NREM': $('input[name="Number_of_PLMs_NREM"]').val(row[1]);break;
+                            case 'Number of PLMs REM': $('input[name="Number_of_PLMs_REM"]').val(row[1]);break;
+                            case 'Number of PLM Total Sleep': $('input[name="Number_of_PLM_Total_Sleep"]').val(row[1]);break;
+                            case 'PLM Index NREM': $('input[name="PLM_Index_NREM"]').val(row[1]);break;
+                            case 'PLM Index REM': $('input[name="PLM_Index_REM"]').val(row[1]);break;
+                            case 'PLM Index Total': $('input[name="PLM_Index_Total"]').val(row[1]);break;
+                        }
+                    }
+                });
+                reader.readAsText(file);
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

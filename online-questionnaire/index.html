@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- The meta data are changed by the active module-->
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+    </head>
+    <body>
+        <!-- Typical website layout, the contents are dynamiclly updated by modules-->
+        <div id=header></div>
+        <div id=content></div>
+        <div id=footer></div>
+    </body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+    <script boot-up>
+        //------------------------------------
+        $vm={};$vm.ver=[0.58,0.58]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        //------------------------------------
+        //app urls
+        $vm.public_url_$A='https://spardac.wappsystem.com.au';
+        $vm.local_url_$A='http://127.0.0.1:8000/wappsystem/spardacmdb';
+        $vm.public_url_$B='https://modules.wappsystem.com.au';
+        $vm.local_url_$B='http://127.0.0.1:8000/wappsystem/modules';
+        //------------------------------------
+        //where are your start modules
+        $vm.start_modules=[
+            "$A/online-questionnaire/app.html",
+            "$B/mdb/f/frame.html",
+        ]
+        //------------------------------------
+        //modules used in this app
+        $vm.module_list={
+        };
+        //------------------------------------
+        //where are your all other modules
+        $vm.app_modules=[
+            "$A/online-questionnaire/components/spardac-login.js",
+            "$A/components/spardac.js",
+        ]
+        //------------------------------------
+        
+        
+        
+        
+        //------------------------------------
+        //Do not need to chang the following code in most cases
+        //The following code will load a framework module and your application modules
+        //------------------------------------
+        $VmAPI={};$vm.start_time=new Date().getTime();
+        //------------------------------------
+        //replace the url
+        $vm.replace_url=function(url){
+            var urlR=url.replace("$A",$vm.public_url_$A);
+                urlR=urlR.replace("$B",$vm.public_url_$B);
+            if($vm.localhost==true) urlR=urlR.replace($vm.public_url_$A,$vm.local_url_$A);
+            if($vm.localhost==true) urlR=urlR.replace($vm.public_url_$B,$vm.local_url_$B);
+            return urlR;
+        }
+        //------------------------------------
+        if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
+        for(p in $vm.start_modules) $vm.start_modules[p]=$vm.replace_url($vm.start_modules[p]);
+        for(p in $vm.app_modules) $vm.app_modules[p]=$vm.replace_url($vm.app_modules[p]);
+        //------------------------------------
+        $vm._I=0; $vm._N=$vm.start_modules.length+$vm.app_modules.length;
+        $vm._boot=function(){
+            $vm._I++;
+            if($vm._I==$vm._N){
+                for(p in $vm.module_list) $vm.module_list[p].url=$vm.replace_url($vm.module_list[p].url);
+                $vm._start();
+            }
+        }
+        //------------------------------------------
+        $vm._id=2;
+        //---------------------------------------------
+        var apppath=window.location.href.substring(0, window.location.href.lastIndexOf('/')).split('\/?')[0];
+        $($vm.start_modules).each(function(index,url){
+            var ver=localStorage.getItem(apppath+url+"ver");
+            var txt=localStorage.getItem(apppath+url+"txt");
+            if(ver!=$vm.ver[0] || txt==null || $vm.localhost==true){
+                $.get(url+'?_='+new Date().getTime(),function(new_txt){
+                    localStorage.setItem(apppath+url+"txt",new_txt);
+                    localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
+                    console.log('loading from url. '+url);
+                    $('#content').append(new_txt.replace(/__ID/g,'_'+(index+1)));
+                    $vm._boot();
+                },'text');
+            }
+            else{
+                console.log('loading from storage. '+url+' '+ver+'/'+$vm.ver[0]);
+                $('#content').append(txt.replace(/__ID/g,'_'+(index+1)));
+                $vm._boot();
+            }
+        })
+        //---------------------------------------------
+        $($vm.app_modules).each(function(index,url){
+            var ver=localStorage.getItem(apppath+url+"ver");
+            var txt=localStorage.getItem(apppath+url+"txt");
+            if(ver!=$vm.ver[0] || txt==null || $vm.localhost==true){
+                $.get(url+'?_='+new Date().getTime(),function(new_txt){
+                    localStorage.setItem(apppath+url+"txt",new_txt);
+                    localStorage.setItem(apppath+url+"ver",$vm.ver[0]);
+                    console.log('loading from url. '+url);
+                    eval(new_txt);
+                    $vm._boot();
+                },'text');
+            }
+            else{
+                console.log('loading from storage. '+url+' '+ver+'/'+$vm.ver[0]);
+                eval(txt);
+                $vm._boot();
+            }
+        })
+        //---------------------------------------------
+    </script>
+</html>

@@ -1,0 +1,123 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+    	<div id=header__ID>
+    		Medical History
+    	</div>
+    	<form id=F__ID>
+    		<div class="container">
+                <!-- participant part for all tsak forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- Form Inputs-------------------------------------->
+                <div id=dynamic_part__ID></div>
+                <!---------------------------------------------------->
+
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+    			<div class="row">
+    				<div class=col>
+    					<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+    				</div>
+    			</div>
+                <!---------------------------------------------------->
+    		</div>
+    	</form>
+    </section>
+    <script>
+    	function F__ID(){
+    		//-------------------------------------
+            //build text input fields
+            var fields="sleep_med,sleep_suppl,past6_aspirin,curr_aspirin,past6_fentanyl,curr_fentanyl,past6_hydromorphone,curr_hydromorphone,past6_ibuprofen,curr_ibuprofen,past6_ibuprofen_co,";
+            fields+="curr_ibuprofen_co,past6_morphine,curr_morphine,past6_oxycodone,curr_oxycodone,past6_paracetamol,curr_paracetamol,past6_paracetamol_co,curr_paracetamol_co,past6_tramadol,curr_tramadol,";
+            fields+="past6_antihistamine,curr_antihistaminee,past6_pseudoephedrine,curr_pseudoephedrine,past6_betamethasone,curr_betamethasone,past6_celecoxib,curr_celecoxib,past6_diclofenac,";
+            fields+="curr_diclofenac,past6_indomethacin,curr_indomethacin,past6_meloxicam,curr_meloxicam,past6_naproxen,curr_naproxen,past6_prednisolone,curr_prednisolone,past6_prednisone,";
+            fields+="curr_prednisone,past6_alprazolam,curr_alprazolam,past6_clonazepam,curr_clonazepam,past6_diazepam,curr_diazepam,past6_flunitrazepam,curr_flunitrazepam,past6_lorazepam,";
+            fields+="curr_lorazepam,past6_melatonin,curr_melatonin,past6_nitrazepam,curr_nitrazepam,past6_oxazepam,curr_oxazepam,past6_teman,curr_pregabalin,past6_primidone,curr_primidone,";
+            fields+="past6_valproate,curr_valproate,past6_tiagabine,curr_tiagabine,past6_thyroxine,curr_thyroxine,past6_amoxycillin,curr_amoxycillin,past6_amox_clav,curr_amox_clav,";
+            fields+="past6_cephalexin,curr_cephalexin,past6_chloramphenicol,curr_chloramphenicol,past6_roxithromycin,curr_roxithromycin,past6_esomeprazole,curr_esomeprazole,past6_omeprazole,";
+            fields+="curr_omeprazole,past6_pantoprazole,curr_pantoprazole,past6_rabeprazol,curr_rabeprazol,past6_ranitidine,curr_ranitidine,past6_gliclazide,curr_gliclazide,past6_insulin,";
+            fields+="curr_insulin,past6_metformin,curr_metformin,past6_met_gliben,curr_met_gliben,past6_pioglitazone,curr_pioglitazone,past6_rosiglitazone,curr_rosiglitazone,past6_cyp_ethin,";
+            fields+="curr_cyp_ethin,past6_drosp_ethin,curr_drosp_ethin,past6_levon_ethin,curr_levon_ethin,past6_topical_steroids,curr_topical_steroids,past6_other_hormonal_contraception,";
+            fields+="curr_other_hormonal_contraception,past6_sex_steroids,curr_sex_steroids,past6_herbal_remedies,curr_herbal_remedies,add_med";
+            var fs=fields.split(',');
+            var txt="";
+            for(var i=0;i<fs.length;i++){
+                txt+="<div class='row row__ID'><div class='col'>\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
+                txt+="</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            VmInclude:__CURRENT_PATH__/shared-form.js
+    		//-------------------------------------
+    	}
+    </script>
+    <style>
+    	#F__ID div span{
+    		display:inline-block;
+    		padding-bottom:5px;
+    	}
+    	#F__ID div label{
+    		display:inline-block;
+    	}
+    	#D__ID{
+    		height:100%;
+    		overflow:auto;
+    		animation: vm_module_fadein 1.0s;
+    		background-color:#fff;
+    	}
+        #form_container__ID{
+            margin-top:20px;
+    		max-width: 700px;
+    		margin-left: auto;
+    		margin-right: auto;
+
+    		font-family: Verdana,sans-serif;
+        	font-size: 15px;
+        	line-height: 1.5;
+    	}
+    	#form_container__ID .row__ID{
+    		padding:6px 5px;
+    	}
+    	#form_container__ID .row__ID:hover{
+    		background-color: #ddd;
+    	}
+    	#header__ID{
+    		background-color:#727b84;
+    		color:#fff;
+    		padding:10px 15px 10px 15px;
+    		font-size:120%;
+            border:1px solid #bbb;
+            border-bottom-width: 0;
+    	}
+    	#F__ID{
+    		border:1px solid #bbb;
+            border-top-width: 0;
+    		padding:6px 15px 20px 15px;
+    		margin-bottom:200px;
+    	}
+    	#F__ID fieldset {
+    	    border: 0px solid #c0c0c0;
+    	    margin: 0;
+    	    padding: 0;
+    	}
+    	@media screen and (max-width:768px){
+    		#form_container__ID{
+    			padding:20px 10px 50px 10px;
+    		}
+    	}
+    </style>
+</div>

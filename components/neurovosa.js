@@ -1,0 +1,92 @@
+(function(){
+    var modules={
+        "panel-main-neurovosa":    			{url:"$A/components/panel/panel-main.html",router:1},
+        "panel-child-neurovosa":    			{url:"$A/components/panel/panel-child.html"},
+        
+        "participant-data":   		{url:"$A/components/participant/participant-data.html",Table:"neurovosa-participant",form_module:"participant-form",router:1,
+                                            child_panel:"panel-child-neurovosa",
+                                            questionnaire_setup:"online-questionnaire-setup-neurovosa",
+                                            online_questionnaire:"online-questionnaire-app-neurovosa",
+                                            participant_id:{field1:"Subject_ID",field2:"Subject_Initials"}
+                                        },
+        "participant-form":   		{url:"$A/components/participant/participant-form.html",Table:"neurovosa-participant"},
+
+        "online-questionnaire-setup-neurovosa": 	{url:"$A/modulesnline-questionnaire/components/modulesnline-questionnaire-setup.html",Table:"neurovosa-participant"},
+        "online-questionnaire-app-neurovosa":    {url:"$A/modulesnline-questionnaire/index.html"},
+
+        "notes":  		  	  			{url:"$A/modules/notes.html"},
+
+        "neurovosa-randomisation-table-data":		    {url:"$A/modules/randomisation-table-data.html",Table:"neurovosa-randomisation-table",form_module:"neurovosa-randomisation-table-form"},
+        "neurovosa-randomisation-table-form":		    {url:"$A/modules/randomisation-table-form.html",Table:"neurovosa-randomisation-table"},
+        "neurovosa-concom-medication-data":            {url:"$A/modules/concom-medication-data.html",Table:"neurovosa-concom-medication",form_module:"neurovosa-concom-medication-form"},
+        "neurovosa-concom-medication-form":            {url:"$A/modules/concom-medication-form.html",Table:"neurovosa-concom-medication"},
+        "neurovosa-adverse-event-data":                {url:"$A/modules/adverse-event-data.html",Table:"neurovosa-adverse-event",form_module:"neurovosa-adverse-event-form"},
+        "neurovosa-adverse-event-form":                {url:"$A/modules/adverse-event-form.html",Table:"neurovosa-adverse-event"},
+
+        "neurovosa-s-date-data":		                {url:"$A/modules/date-data.html",Table:"neurovosa-s-date",form_module:"neurovosa-s-date-form"},
+        "neurovosa-s-date-form":		                {url:"$A/modules/date-form.html",Table:"neurovosa-s-date"},
+
+        "neurovosa-b-pre-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-b-pre-pvt",form_module:"neurovosa-b-pre-pvt-form"},
+        "neurovosa-b-pre-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-b-pre-pvt"},
+        "neurovosa-b-pre-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-b-pre-kss",form_module:"neurovosa-b-pre-kss-form"},
+        "neurovosa-b-pre-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-b-pre-kss"},
+
+        "neurovosa-b-psg300-data":		            {url:"$A/modules/psg300-data.html",Table:"neurovosa-b-psg300",form_module:"neurovosa-b-psg300-form"},
+        "neurovosa-b-psg300-form":		            {url:"$A/modules/psg300-form.html",Table:"neurovosa-b-psg300"},
+
+        "neurovosa-b-post-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-b-post-kss",form_module:"neurovosa-b-post-kss-form"},
+        "neurovosa-b-post-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-b-post-kss"},
+        "neurovosa-b-post-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-b-post-pvt",form_module:"neurovosa-b-post-pvt-form"},
+        "neurovosa-b-post-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-b-pre-pvt"},
+        "neurovosa-b-post-nback1-data":		        {url:"$A/modules/neurocog/nback1-data.html",Table:"neurovosa-b-post-nback1",form_module:"neurovosa-b-post-nback1-form"},
+        "neurovosa-b-post-nback1-form":		        {url:"$A/modules/neurocog/nback1-form.html",Table:"neurovosa-b-post-nback1"},
+        "neurovosa-b-post-nback2-data":		        {url:"$A/modules/neurocog/nback2-data.html",Table:"neurovosa-b-post-nback2",form_module:"neurovosa-b-post-nback2-form"},
+        "neurovosa-b-post-nback2-form":		        {url:"$A/modules/neurocog/nback2-form.html",Table:"neurovosa-b-post-nback2"},
+        "neurovosa-b-post-stroop-text-data":		    {url:"$A/modules/neurocog/stroop-text-data.html",Table:"neurovosa-b-post-stroop-text",form_module:"neurovosa-b-post-stroop-text-form"},
+        "neurovosa-b-post-stroop-text-form":		    {url:"$A/modules/neurocog/stroop-text-form.html",Table:"neurovosa-b-post-stroop-text"},
+        "neurovosa-b-post-stroop-colour-data":		{url:"$A/modules/neurocog/stroop-colour-data.html",Table:"neurovosa-b-post-stroop-colour",form_module:"neurovosa-b-post-stroop-colour-form"},
+        "neurovosa-b-post-stroop-colour-form":		{url:"$A/modules/neurocog/stroop-colour-form.html",Table:"neurovosa-b-post-stroop-colour"},
+        "neurovosa-b-post-lct-data":		            {url:"$A/modules/neurocog/lct-data.html",Table:"neurovosa-b-post-lct",form_module:"neurovosa-b-post-lct-form"},
+        "neurovosa-b-post-lct-form":		            {url:"$A/modules/neurocog/lct-form.html",Table:"neurovosa-b-post-lct"},
+        "neurovosa-b-post-ess-data":		            {url:"$A/modules/ess-data.html",Table:"neurovosa-b-post-ess",form_module:"neurovosa-b-post-ess-form"},
+        "neurovosa-b-post-ess-form":		            {url:"$A/modules/ess-form.html",Table:"neurovosa-b-post-ess"},
+        "neurovosa-b-post-isi-data":		            {url:"$A/modules/isi-data.html",Table:"neurovosa-b-post-isi",form_module:"neurovosa-b-post-isi-form"},
+        "neurovosa-b-post-isi-form":		            {url:"$A/modules/isi-form.html",Table:"neurovosa-b-post-isi"},
+        "neurovosa-b-post-psqi-data":		            {url:"$A/modules/psqi-data.html",Table:"neurovosa-b-post-psqi",form_module:"neurovosa-b-post-psqi-form"},
+        "neurovosa-b-post-psqi-form":		            {url:"$A/modules/psqi-form.html",Table:"neurovosa-b-post-psqi"},
+        "neurovosa-b-post-hads-data":		            {url:"$A/modules/hads-data.html",Table:"neurovosa-b-post-hads",form_module:"neurovosa-b-post-hads-form"},
+        "neurovosa-b-post-hads-form":		            {url:"$A/modules/hads-form.html",Table:"neurovosa-b-post-hads"},
+
+        "neurovosa-3m-pre-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-3m-pre-pvt",form_module:"neurovosa-3m-pre-pvt-form"},
+        "neurovosa-3m-pre-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-3m-pre-pvt"},
+        "neurovosa-3m-pre-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-3m-pre-kss",form_module:"neurovosa-3m-pre-kss-form"},
+        "neurovosa-3m-pre-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-3m-pre-kss"},
+
+        "neurovosa-3m-psg300-data":		            {url:"$A/modules/psg300-data.html",Table:"neurovosa-3m-psg300",form_module:"neurovosa-3m-psg300-form"},
+        "neurovosa-3m-psg300-form":		            {url:"$A/modules/psg300-form.html",Table:"neurovosa-3m-psg300"},
+
+        "neurovosa-3m-post-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-3m-post-kss",form_module:"neurovosa-3m-post-kss-form"},
+        "neurovosa-3m-post-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-3m-post-kss"},
+        "neurovosa-3m-post-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-3m-post-pvt",form_module:"neurovosa-3m-post-pvt-form"},
+        "neurovosa-3m-post-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-3m-pre-pvt"},
+        "neurovosa-3m-post-nback1-data":		        {url:"$A/modules/neurocog/nback1-data.html",Table:"neurovosa-3m-post-nback1",form_module:"neurovosa-3m-post-nback1-form"},
+        "neurovosa-3m-post-nback1-form":		        {url:"$A/modules/neurocog/nback1-form.html",Table:"neurovosa-3m-post-nback1"},
+        "neurovosa-3m-post-nback2-data":		        {url:"$A/modules/neurocog/nback2-data.html",Table:"neurovosa-3m-post-nback2",form_module:"neurovosa-3m-post-nback2-form"},
+        "neurovosa-3m-post-nback2-form":		        {url:"$A/modules/neurocog/nback2-form.html",Table:"neurovosa-3m-post-nback2"},
+        "neurovosa-3m-post-stroop-text-data":		    {url:"$A/modules/neurocog/stroop-text-data.html",Table:"neurovosa-3m-post-stroop-text",form_module:"neurovosa-3m-post-stroop-text-form"},
+        "neurovosa-3m-post-stroop-text-form":		    {url:"$A/modules/neurocog/stroop-text-form.html",Table:"neurovosa-3m-post-stroop-text"},
+        "neurovosa-3m-post-stroop-colour-data":		{url:"$A/modules/neurocog/stroop-colour-data.html",Table:"neurovosa-3m-post-stroop-colour",form_module:"neurovosa-3m-post-stroop-colour-form"},
+        "neurovosa-3m-post-stroop-colour-form":		{url:"$A/modules/neurocog/stroop-colour-form.html",Table:"neurovosa-3m-post-stroop-colour"},
+        "neurovosa-3m-post-lct-data":		            {url:"$A/modules/neurocog/lct-data.html",Table:"neurovosa-3m-post-lct",form_module:"neurovosa-3m-post-lct-form"},
+        "neurovosa-3m-post-lct-form":		            {url:"$A/modules/neurocog/lct-form.html",Table:"neurovosa-3m-post-lct"},
+        "neurovosa-3m-post-ess-data":		            {url:"$A/modules/ess-data.html",Table:"neurovosa-3m-post-ess",form_module:"neurovosa-3m-post-ess-form"},
+        "neurovosa-3m-post-ess-form":		            {url:"$A/modules/ess-form.html",Table:"neurovosa-3m-post-ess"},
+        "neurovosa-3m-post-isi-data":		            {url:"$A/modules/isi-data.html",Table:"neurovosa-3m-post-isi",form_module:"neurovosa-3m-post-isi-form"},
+        "neurovosa-3m-post-isi-form":		            {url:"$A/modules/isi-form.html",Table:"neurovosa-3m-post-isi"},
+        "neurovosa-3m-post-psqi-data":		            {url:"$A/modules/psqi-data.html",Table:"neurovosa-3m-post-psqi",form_module:"neurovosa-3m-post-psqi-form"},
+        "neurovosa-3m-post-psqi-form":		            {url:"$A/modules/psqi-form.html",Table:"neurovosa-3m-post-psqi"},
+        "neurovosa-3m-post-hads-data":		            {url:"$A/modules/hads-data.html",Table:"neurovosa-3m-post-hads",form_module:"neurovosa-3m-post-hads-form"},
+        "neurovosa-3m-post-hads-form":		            {url:"$A/modules/hads-form.html",Table:"neurovosa-3m-post-hads"},
+   }
+    for(m in modules){$vm.module_list[m]=modules[m];}
+})();

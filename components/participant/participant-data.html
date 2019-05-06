@@ -1,0 +1,61 @@
+<div id=D__ID>
+    <div>
+            VmInclude:__CURRENT_PATH__/grid.01.hp.html
+        </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js       
+            //-------------------------------------
+            $('#title__ID').text('Participants');            
+            //-------------------------------------
+            var fields="_Participant_ID,Subject_ID,Randomisation_Number|I1,Screening_Number,Subject_Initials,Gender,DOB,_Data_Entry,_Setup,_Questionnaire,_Login_ID,_Password";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+                    case 'DOB':
+                        if(records[I].Data.DOB!=''){
+                            var dob=(records[I].Data.DOB).split('-');
+                            td.html(dob[2]+'/'+dob[1]+'/'+dob[0]);
+                        }
+                        break;
+                    case '_Participant_ID':
+                        td.html(records[I].UID);
+                        break;
+                    case '_Data_Entry':
+                        td.html("<u style='cursor:pointer'>Data Entry</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(m.child_panel,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Setup':
+                        td.html("<u style='cursor:pointer'>Setup</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(m.questionnaire_setup,'',{record:records[I]});
+                        });
+                        break;
+                    case '_Questionnaire':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Online Questionnaire</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('db=dev')!=-1) db="&db=dev";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+records[I].UID+"-"+records[I].Data.Subject_Initials+"&password="+records[I].Data._Password;
+                            var q_url=$vm.module_list[m.online_questionnaire].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                    case '_Login_ID':
+                        td.html(records[I].UID+"-"+records[I].Data.Subject_Initials);
+                        break;
+                }
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>
