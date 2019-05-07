@@ -1,0 +1,83 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3>Pulse Wave Analysis</h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <!-- form group -->
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <fieldset class="">
+                                        <div class=row>
+                                            <div class="col-sm-3"><label><span class="">SBP</span><input type=number class=form-control name=SBP></label></div>
+                                            <div class="col-sm-3"><label><span class="">DBP</span><input type=number class=form-control name=DBP></label></div>
+                                            <div class="col-sm-3"><label><span class="">MAP</span><input type=number class=form-control name=MAP></label></div>
+                                            <div class="col-sm-3"><label><span class="">PP</span><input type=number class=form-control name=PP></label></div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <fieldset class="">
+                                        <div class=row>
+                                            <div class="col-sm-3"><label><span class="">AP</span><input type=number class=form-control name=AP></label></div>
+                                            <div class="col-sm-3"><label><span class="">Aix</span><input type=number class=form-control name=Aix></label></div>
+                                            <div class="col-sm-3"><label><span class="">Aix(75)</span><input type=number class=form-control name=Aix_75></label></div>
+                                            <div class="col-sm-3"><label><span class="">HR</span><input type=number class=form-control name=HR></label></div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            $('#F__ID input[name=Height]').on('change', function () { cal(); })
+            $('#F__ID input[name=Weight]').on('change', function () { cal(); })
+            var cal = function () {
+                var h = $('#F__ID input[name=Height]').val() / 100;
+                var w = $('#F__ID input[name=Weight]').val();
+                var b = (w / (h * h)).toFixed(2);
+                $('#F__ID input[name=BMI]').val(b);
+            }
+            //-------------------------------------
+
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>
