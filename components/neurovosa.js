@@ -25,9 +25,17 @@
 
         "neurovosa-s-date-data":		                {url:"$A/modules/date-data.html",Table:"neurovosa-s-date",form_module:"neurovosa-s-date-form"},
         "neurovosa-s-date-form":		                {url:"$A/modules/date-form.html",Table:"neurovosa-s-date"},
+        "neurovosa-b-patient-background-data":		            {url:"$A/modules/patient-background-data.html",Table:"neurovosa-b-patient-background",form_module:"neurovosa-b-patient-background-form"},
+        "neurovosa-b-patient-background-form":		            {url:"$A/modules/patient-background-form.html",Table:"neurovosa-b-patient-background"},
+        "neurovosa-b-medical-history-data":		            {url:"$A/modules/medical-history-data.html",Table:"neurovosa-b-medical-history",form_module:"neurovosa-b-medical-history-form"},
+        "neurovosa-b-medical-history-form":		            {url:"$A/modules/medical-history-form.html",Table:"neurovosa-b-medical-history"},
+        "neurovosa-b-medications-data":		            {url:"$A/modules/medications-data.html",Table:"neurovosa-b-medications",form_module:"neurovosa-b-medications-form"},
+        "neurovosa-b-medications-form":		            {url:"$A/modules/medications-form.html",Table:"neurovosa-b-medications"},
 
         "neurovosa-b-pre-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-b-pre-pvt",form_module:"neurovosa-b-pre-pvt-form"},
         "neurovosa-b-pre-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-b-pre-pvt"},
+        "neurovosa-b-pre-word-pairs-set1-evening":	    {url:"$A/modules/word-pairs/set1-evening.html"},
+        "neurovosa-b-pre-word-pairs-set2-evening":	    {url:"$A/modules/word-pairs/set2-evening.html"},
         "neurovosa-b-pre-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-b-pre-kss",form_module:"neurovosa-b-pre-kss-form"},
         "neurovosa-b-pre-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-b-pre-kss"},
 
@@ -48,6 +56,8 @@
         "neurovosa-b-post-stroop-colour-form":		{url:"$A/modules/neurocog/stroop-colour-form.html",Table:"neurovosa-b-post-stroop-colour"},
         "neurovosa-b-post-lct-data":		            {url:"$A/modules/neurocog/lct-data.html",Table:"neurovosa-b-post-lct",form_module:"neurovosa-b-post-lct-form"},
         "neurovosa-b-post-lct-form":		            {url:"$A/modules/neurocog/lct-form.html",Table:"neurovosa-b-post-lct"},
+        "neurovosa-b-post-word-pairs-set1-morning":	    {url:"$A/modules/word-pairs/set1-morning.html"},
+        "neurovosa-b-post-word-pairs-set2-morning":	    {url:"$A/modules/word-pairs/set2-morning.html"},
         "neurovosa-b-post-ess-data":		            {url:"$A/modules/ess-data.html",Table:"neurovosa-b-post-ess",form_module:"neurovosa-b-post-ess-form"},
         "neurovosa-b-post-ess-form":		            {url:"$A/modules/ess-form.html",Table:"neurovosa-b-post-ess"},
         "neurovosa-b-post-isi-data":		            {url:"$A/modules/isi-data.html",Table:"neurovosa-b-post-isi",form_module:"neurovosa-b-post-isi-form"},
@@ -59,6 +69,8 @@
 
         "neurovosa-3m-pre-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-3m-pre-pvt",form_module:"neurovosa-3m-pre-pvt-form"},
         "neurovosa-3m-pre-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-3m-pre-pvt"},
+        "neurovosa-3m-pre-word-pairs-set1-evening":	    {url:"$A/modules/word-pairs/set1-evening.html"},
+        "neurovosa-3m-pre-word-pairs-set2-evening":	    {url:"$A/modules/word-pairs/set2-evening.html"},
         "neurovosa-3m-pre-kss-data":		            {url:"$A/modules/kss-data.html",Table:"neurovosa-3m-pre-kss",form_module:"neurovosa-3m-pre-kss-form"},
         "neurovosa-3m-pre-kss-form":		            {url:"$A/modules/kss-form.html",Table:"neurovosa-3m-pre-kss"},
 
@@ -79,6 +91,8 @@
         "neurovosa-3m-post-stroop-colour-form":		{url:"$A/modules/neurocog/stroop-colour-form.html",Table:"neurovosa-3m-post-stroop-colour"},
         "neurovosa-3m-post-lct-data":		            {url:"$A/modules/neurocog/lct-data.html",Table:"neurovosa-3m-post-lct",form_module:"neurovosa-3m-post-lct-form"},
         "neurovosa-3m-post-lct-form":		            {url:"$A/modules/neurocog/lct-form.html",Table:"neurovosa-3m-post-lct"},
+        "neurovosa-3m-post-word-pairs-set1-morning":	    {url:"$A/modules/word-pairs/set1-morning.html"},
+        "neurovosa-3m-post-word-pairs-set2-morning":	    {url:"$A/modules/word-pairs/set2-morning.html"},
         "neurovosa-3m-post-ess-data":		            {url:"$A/modules/ess-data.html",Table:"neurovosa-3m-post-ess",form_module:"neurovosa-3m-post-ess-form"},
         "neurovosa-3m-post-ess-form":		            {url:"$A/modules/ess-form.html",Table:"neurovosa-3m-post-ess"},
         "neurovosa-3m-post-isi-data":		            {url:"$A/modules/isi-data.html",Table:"neurovosa-3m-post-isi",form_module:"neurovosa-3m-post-isi-form"},
