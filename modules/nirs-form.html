@@ -1,0 +1,70 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3>NIRS</h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <!-- form group -->
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <fieldset class="">
+                                        <div class=row>
+                                            <div class="col-sm-3"><label><span class="">Wake ScO2</span><input type=number class=form-control name=Wake_ScO2></label></div>
+                                            <div class="col-sm-3"><label><span class="">Mean ScO2</span><input type=number class=form-control name=Mean_ScO2></label></div>
+                                            <div class="col-sm-3"><label><span class="">Nadir ScO2</span><input type=number class=form-control name=Nadir_ScO2></label></div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            $('#F__ID input[name=Height]').on('change', function () { cal(); })
+            $('#F__ID input[name=Weight]').on('change', function () { cal(); })
+            var cal = function () {
+                var h = $('#F__ID input[name=Height]').val() / 100;
+                var w = $('#F__ID input[name=Weight]').val();
+                var b = (w / (h * h)).toFixed(2);
+                $('#F__ID input[name=BMI]').val(b);
+            }
+            //-------------------------------------
+
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>
