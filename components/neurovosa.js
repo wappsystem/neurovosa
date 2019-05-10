@@ -102,6 +102,8 @@
         "neurovosa-b-post-psqi-form":		            {url:"$A/modules/psqi-form.html",Table:"neurovosa-b-post-psqi"},
         "neurovosa-b-post-hads-data":		            {url:"$A/modules/hads-data.html",Table:"neurovosa-b-post-hads",form_module:"neurovosa-b-post-hads-form"},
         "neurovosa-b-post-hads-form":		            {url:"$A/modules/hads-form.html",Table:"neurovosa-b-post-hads"},
+        "neurovosa-b-post-aused-data":		            {url:"$A/modules/aused-data.html",Table:"neurovosa-b-post-aused",form_module:"neurovosa-b-post-aused-form"},
+        "neurovosa-b-post-aused-form":		            {url:"$A/modules/aused-form.html",Table:"neurovosa-b-post-aused"},
 
         "neurovosa-3m-pre-pvt-data":		            {url:"$A/modules/pvt-data.html",Table:"neurovosa-3m-pre-pvt",form_module:"neurovosa-3m-pre-pvt-form"},
         "neurovosa-3m-pre-pvt-form":		            {url:"$A/modules/pvt-form.html",Table:"neurovosa-3m-pre-pvt"},
@@ -165,6 +167,8 @@
         "neurovosa-3m-post-psqi-form":		            {url:"$A/modules/psqi-form.html",Table:"neurovosa-3m-post-psqi"},
         "neurovosa-3m-post-hads-data":		            {url:"$A/modules/hads-data.html",Table:"neurovosa-3m-post-hads",form_module:"neurovosa-3m-post-hads-form"},
         "neurovosa-3m-post-hads-form":		            {url:"$A/modules/hads-form.html",Table:"neurovosa-3m-post-hads"},
+        "neurovosa-3m-post-aused-data":		            {url:"$A/modules/aused-data.html",Table:"neurovosa-3m-post-aused",form_module:"neurovosa-3m-post-aused-form"},
+        "neurovosa-3m-post-aused-form":		            {url:"$A/modules/aused-form.html",Table:"neurovosa-3m-post-aused"},
    }
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();
