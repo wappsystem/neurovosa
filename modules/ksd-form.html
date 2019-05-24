@@ -1,0 +1,478 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3>Karolinska Sleep Diary</h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <!-- form group -->
+                            <div class="form-group">
+                                <fieldset class="subquestions">
+                                    <h4>Please fill in <u>each</u> morning.</h4>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>1. What time did you get into bed?</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Bed Time</span>
+                                            <input class="form-control" type="time" name="ksd_1" required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_1_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>2. What time did you attempt sleep?</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Attempt Sleep</span>
+                                            <input class="form-control" type="time" name="ksd_2" required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_2_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>3. How long did it take to fall asleep</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Number of minutes</span>
+                                            <input class="form-control" type="number" min=0 max=480 name="ksd_3"
+                                                required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_3_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>4. Time of Final Awakening</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Awakening Time</span>
+                                            <input class="form-control" type="time" name="ksd_4" required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_4_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>5. Time of getting out of bed</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Getting out of bed</span>
+                                            <input class="form-control" type="time" name="ksd_5" required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_5_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>6. How long did you sleep?</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class=""> Hours of sleep</span>
+                                            <input class="form-control" type="number" step="any" min=0 max=12 name="ksd_6" required>
+                                        </label><br>
+                                        <label><span class="">Comments</span>
+                                            <input class="form-control" type="text" name="ksd_6_comments">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>7. How did you sleep?</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>very well</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_7" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_7" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_7" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_7" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_7" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>very poorly</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>8. Feeling refreshed after awakening</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>completely</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_8" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_8" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_8" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_8" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_8" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>not at all</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>9. Calm sleep</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>very calm</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_9" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_9" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_9" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_9" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_9" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>very restless</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>10. Slept Through</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>yes</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_10" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_10" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_10" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_10" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_10" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>woke too early</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>11. Ease of Waking up</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>very easy</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_11" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_11" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_11" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_11" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_11" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>very difficult</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>12. Ease of falling asleep</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>very easy</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_12" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_12" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_12" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_12" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_12" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>very difficult</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>13. Amount of Dreaming</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>much</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_13" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_13" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_13" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_13" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_13" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>none</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>14. Naps per day (yesterday)</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class=""> Number of naps</span>
+                                            <input class="form-control" type="number" name="ksd_14" required>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>15. Caffeinated drinks yesterday (tea, coffee, cola drinks, chocolate)</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class=""> Number of caffeinated drinks</span>
+                                            <input class="form-control" type="number" name="ksd_15" required>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <h4>16. Alcohol yesterday (Number of standard drinks)</h4>
+                                    <fieldset class="subquestions">
+                                        <label><span class=""> Number of standard drinks</span>
+                                            <input class="form-control" type="number" name="ksd_16" required>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>17. How sleepy did you feel during the day (yesterday)</h4>
+                                <div class="row">
+                                    <div class="col-sm-3 control-group text-center">
+                                        <label><span>very sleepy</span></label>
+                                    </div>
+                                    <div class="col-sm-6 control-group text-center">
+                                        <div class="questiongroup ">
+                                            <fieldset class="subquestions">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_17" value="5" required>
+                                                    <span class="checkmark no-dot">5</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_17" value="4">
+                                                    <span class="checkmark no-dot">4</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_17" value="3">
+                                                    <span class="checkmark no-dot">3</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_17" value="2">
+                                                    <span class="checkmark no-dot">2</span>
+                                                </label><br>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="ksd_17" value="1">
+                                                    <span class="checkmark no-dot">1</span>
+                                                </label><br>
+                                            </fieldset>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 control-group text-center ">
+                                        <label><span>not sleepy at all</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //---------------------------------------------
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            /*            var load2=m.load;
+                        m.load=function(){
+                            load2();
+                        }
+                         //-------------------------------------
+                        var before_submit=m.before_submit;
+                        m.before_submit=function(data,index){
+                            return before_submit(data,index);
+                        }
+                    */
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 600px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>
