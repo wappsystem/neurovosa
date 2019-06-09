@@ -56,19 +56,21 @@
 		})
 		//------------------------------------
         var calc=function(data){
-    	    var rt=data.ReactionTimes.split(",");
-            var res=data.Result.split(",");
+    	    var rt=data.IndivRT.split(",");
+			var res=data.Result.split(",");
             var corr=0;
             var react=0.0;
             for (var i=0;i<rt.length;i++){
     	        react=react+parseInt(rt[i]);
     	        if(res[i]=='C') corr++;
             }
-            data.SPC=(100*corr/rt.length).toFixed(1);
-            data.SPRT=(react/rt.length*0.001).toFixed(3);
-            data.STTT=(data.timelimit/1000).toString();
-            data.SCORR=corr.toString();
-            data.STotal=rt.length.toString();
+            data.TotalResponses=rt.length.toString();
+            data.CorrectResponses=corr.toString();
+            data.PercentCorrect=(100*corr/rt.length).toFixed(1);
+            data.WrongResponses=(rt.length-corr).toString();
+            data.PercentWrong=(100*(rt.length-corr)/rt.length).toFixed(1);
+            data.TotalTestTime=(data.timelimit/1000).toString();
+			data.MeanRT=(react/rt.length*0.001).toFixed(3);
     	}
 		//------------------------------------
 		var ClearIntervals = function()
@@ -122,6 +124,7 @@
 
 			var pair = [];
 			var timelimit = 45000;
+			//------------------------------------
 			var startTime;
 			var width = canvas.width;
 			var height = canvas.height;
@@ -129,11 +132,14 @@
 			var midY = height / 2;
 			var separation = 90;
 			var results = {
-				Match : [],
-				Time : [],
-				timelimit
+				Result : [],
+				IndivRT : [],
+				ShownColour : [],
+				ShownText : [],
+				ResponseText : [],
+				timelimit,
+				StartTime : ""
 			};
-
 			var rects = [];
 			ctx.clearRect(0, 0, width, height);
 			ctx.textAlign = 'center';
@@ -173,6 +179,7 @@
 				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				intervals.push(setTimeout(Finish, timelimit));
+				results.StartTime=get_now();
 				NextPair();
 			}
 			var Finish = function()
@@ -182,9 +189,11 @@
 				currentSequence = 0;
 				ctx.clearRect(0, 0, width, height);
 				{
-					results.Result = results.Match.join(",");
-					results.ReactionTimes = results.Time.join(",");
-					results.timelimit=results.timelimit;
+					results.Result = results.Result.join(",");
+					results.IndivRT = results.IndivRT.join(",");
+					results.ShownColour = results.ShownColour.join(",");
+					results.ShownText = results.ShownText.join(",");
+					results.ResponseText = results.ResponseText.join(",");
 					callback(results);
 				}
 			}
@@ -212,8 +221,11 @@
 					var r = rects[i];
 					if (x > r.x && x < r.x + r.width && y > r.y && y < r.y + r.height)
 					{
-						results.Match.push(pair[0] == r.name ? 'C' : 'W');
-						results.Time.push(Date.now() - startTime);
+						results.Result.push(pair[0] == r.name ? 'C' : 'W');
+						results.IndivRT.push(Date.now() - startTime);
+						results.ShownColour.push(pair[1]);
+						results.ShownText.push(pair[0]);
+						results.ResponseText.push(r.name);
 						NextPair();
 					}
 				}
@@ -239,6 +251,24 @@
 				}
 			});
 			//------------------------------------
+			var get_now=function(){
+                 var today = new Date();
+                 var dd = today.getDate();
+                 var mm = today.getMonth()+1; //January is 0!
+
+				 var yyyy = today.getFullYear();
+				 var hh = today.getHours()
+				 var mn = today.getMinutes()
+				 var ss = today.getSeconds()
+                 if(dd<10){dd='0'+dd;}
+                 if(mm<10){mm='0'+mm;}
+                 if(mn<10){mn='0'+mn;}
+                 if(hh<10){hh='0'+hh;}
+                 if(ss<10){ss='0'+ss;}
+                 return hh+':'+mn+':'+ss;
+             }
+             //-------------------------------------
+
 		}
 		//------------------------------------
 	}

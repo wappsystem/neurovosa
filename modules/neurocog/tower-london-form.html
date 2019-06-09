@@ -176,6 +176,7 @@ Click-and-drag to arrange the coloured balls on the left to match the Goal on th
 					score = 0;
 				}
 				startTime = Date.now();
+				if(currentPattern==1) results.StartTime=get_now();
 				planningTime = null;
 				success = false;
 				fail = false;
@@ -638,6 +639,23 @@ Click-and-drag to arrange the coloured balls on the left to match the Goal on th
 			});*/
 			//------------------------------------
 		}
+		//------------------------------------
+		var get_now=function(){
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+
+				var yyyy = today.getFullYear();
+				var hh = today.getHours()
+				var mn = today.getMinutes()
+				var ss = today.getSeconds()
+				if(dd<10){dd='0'+dd;}
+				if(mm<10){mm='0'+mm;}
+				if(mn<10){mn='0'+mn;}
+				if(hh<10){hh='0'+hh;}
+				if(ss<10){ss='0'+ss;}
+				return hh+':'+mn+':'+ss;
+			}
 		//------------------------------------
 	}
 </script>
