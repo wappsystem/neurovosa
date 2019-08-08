@@ -40,6 +40,9 @@ Click-and-drag to arrange the coloured balls on the left to match the Goal on th
 		var this_module=$vm.module_list[$vm.vm['__ID'].name];
 		//------------------------------------
 		$('#D__ID').on('load',function(){
+			$('#header').hide();
+			$('#footer').hide();
+			$('#participant_div__ID').hide()
 			$('#thirdparty_container__ID').css('height',$vm.min_height);
 			third_party("thirdparty_container__ID",data_process);
 		})
