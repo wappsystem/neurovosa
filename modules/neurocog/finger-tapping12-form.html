@@ -61,7 +61,7 @@
                     var error=[];
                     var time=[];
                     var pos=0;
-                    for (var i=1;i<7;i++) {
+                    for (var i=1;i<13;i++) {
                         var r_sn = sn.filter(pp => pp ==i);
                         //r_sn=sn.slice(pos,pos+parseInt(r_sn.length/5)*5);
                         var r_tt=tt.slice(pos,pos+parseInt(r_sn.length));
@@ -90,6 +90,12 @@
                     data.Correct_4=correct[3];data.Error_4=error[3];data.Time_4=time[3];
                     data.Correct_5=correct[4];data.Error_5=error[4];data.Time_5=time[4];
                     data.Correct_6=correct[5];data.Error_6=error[5];data.Time_6=time[5];
+                    data.Correct_7=correct[6];data.Error_7=error[6];data.Time_7=time[6];
+                    data.Correct_8=correct[7];data.Error_8=error[7];data.Time_8=time[7];
+                    data.Correct_9=correct[8];data.Error_9=error[8];data.Time_9=time[8];
+                    data.Correct_10=correct[9];data.Error_10=error[9];data.Time_10=time[9];
+                    data.Correct_11=correct[10];data.Error_11=error[10];data.Time_11=time[10];
+                    data.Correct_12=correct[11];data.Error_12=error[11];data.Time_12=time[11];
 		}
 		//------------------------------------
 		var ClearIntervals = function()
@@ -134,7 +140,7 @@
 			var canvas = document.getElementById('main_canvas');
 			var ctx = canvas.getContext('2d');
 
-			var repeats = 6;
+			var repeats = 12;
 			var predelaytime = 5000;
 			var predelaytext = "Please be ready. The task will start shortly.";
 			var postdelaytime = 25000;
