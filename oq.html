@@ -18,7 +18,7 @@
     </body>
     <script boot-up>
         //------------------------------------
-        $vm={};$vm.ver=[0.42,0.42]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
+        $vm={};$vm.ver=[0.28,0.28]; //increase ver[0] if any module changed, increase ver[1] if vm.js changed
         $vm.debug=1;
         //------------------------------------
         //setup modules location
@@ -34,19 +34,23 @@
         //modules used immediately
         $vm.module_list={
             //you can add modules here directly
-            "home":	        {url:"$H/0/home.html",router:1},
-            "app":	        {url:"$H/0/app.html"},
-            "header":	    {url:"$H/0/header.html"},
-            "footer":	    {url:"$H/0/footer.html"},
+            "home":         {url:"$H/m/oq-login.html","Table":"neurovosa-participant",questionnaire_panel:"online-questionnaire-panel"},
+            "online-questionnaire-panel":   {url:"$H/m/oq-panel.html",router:1},
+            //"home":	        {url:"$H/m/login.html",router:1},
+            "app":	        {url:"$H/0-oq/app.html"},
+            "header":	    {url:"$H/0-oq/header.html"},
+            "footer":	    {url:"$H/0-oq/footer.html"},
         };
         for(p in $vm.module_list) $vm.module_list[p].url=$vm.module_list[p].url.replace('$H',$vm.hosting_path);
         //------------------------------------
         //all other modules, used on demand 
+        //------------------------------------
         $vm.app_modules=[
             //you can add a js file that will add mmodules to the $vm.module_list
+            //"$H/module-login.js",
             "$H/module-list.js",
         ]
-        for(i in $vm.app_modules) $vm.app_modules[i]=$vm.app_modules[i].replace('$H',$vm.hosting_path);
+        for(i in $vm.app_modules) $vm.app_modules[i]=$vm.app_modules[i].replace('$H',$vm.hosting_path).replace('online-questionnaire/module-list','module-list');
         //------------------------------------
         //called by framework
         $vm.start=function(){
