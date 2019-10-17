@@ -1,5 +1,5 @@
 <div id=thirdparty_container__ID>
-	<div id=instructions style="margin: auto; text-align:center;">
+	<div id=instructions__ID style="margin: auto; text-align:center;">
 		<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox ">
 				<div class="row">
 					<div class="col-12">
@@ -24,12 +24,13 @@
 			</div>
 		<div style='margin-top:50px; font-size:x-large; color:rgba(0,0,255,255)'>Using your non-dominant hand on the numeric keyboard, repeatedly tap the five element sequence shown</div>
 		<div style='font-size:x-large; font-weight:bold; color:rgba(0,0,255,255)'>as quickly and accurately as possible</div>
-		<button id=start_button style="margin-top:20px;" class='btn btn-primary btn-lg'>Start</button>
+		<button id=start_button__ID style="margin-top:20px;" class='btn btn-primary btn-lg'>Start</button>
 	</div>
-	<canvas id=main_canvas width=1100 height=300 style="margin: auto; display: block;"></canvas>
+	<canvas id=main_canvas__ID width=1100 height=300 style="margin: auto; display: block;"></canvas>
 </div>
 <script>
 	function F__ID(){
+		// Ver. 17/10/2019
 		//-------------------------------------
 		VmInclude:__COMPONENT__/f/form.01.js
 		VmInclude:__CURRENT_PATH__/../../library/shared-form.js
@@ -95,7 +96,13 @@
                     data.Correct_9=correct[8];data.Error_9=error[8];data.Time_9=time[8];
                     data.Correct_10=correct[9];data.Error_10=error[9];data.Time_10=time[9];
                     data.Correct_11=correct[10];data.Error_11=error[10];data.Time_11=time[10];
-                    data.Correct_12=correct[11];data.Error_12=error[11];data.Time_12=time[11];
+					data.Correct_12=correct[11];data.Error_12=error[11];data.Time_12=time[11];
+					data.PreTLS=((parseInt(correct[0])+parseInt(correct[1])+parseInt(correct[2]))/3).toFixed(1);
+					data.PoTLS=((parseInt(correct[9])+parseInt(correct[10])+parseInt(correct[11]))/3).toFixed(1);
+					data.PreTES=((parseInt(error[0])+parseInt(error[1])+parseInt(error[2]))/3).toFixed(1);
+					data.PoTES=((parseInt(error[9])+parseInt(error[10])+parseInt(error[11]))/3).toFixed(1);
+					data.PreTRT=((parseFloat(time[0])+parseFloat(time[1])+parseFloat(time[2]))/3).toFixed(2);
+					data.PoTRT=((parseFloat(time[9])+parseFloat(time[10])+parseFloat(time[11]))/3).toFixed(2);
 		}
 		//------------------------------------
 		var ClearIntervals = function()
@@ -134,12 +141,11 @@
 		}
 		//------------------------------------
 		var third_party=function(containerID,callback){
-			$('#instructions').show();
+			$('#instructions__ID').show();
 			ClearIntervals();
 			$('#'+containerID).css('background-color','#ffffff');
-			var canvas = document.getElementById('main_canvas');
+			var canvas = document.getElementById('main_canvas__ID');
 			var ctx = canvas.getContext('2d');
-
 			var repeats = 12;
 			var predelaytime = 5000;
 			var predelaytext = "Please be ready. The task will start shortly.";
@@ -177,7 +183,7 @@
 			ctx.font = '48px arial';
 
 			$(document).keypress(function(e){
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				if (currentSequence > 0 && currentNumber < sequence.length)
 				{
@@ -211,7 +217,7 @@
 
 			var ResetSequence = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				ctx.clearRect(0, 0, width, height);
 				ctx.fillStyle = 'rgb(0,0,102)';
@@ -230,7 +236,7 @@
 
 			var Start = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				repeat++;
 				ctx.clearRect(0, 0, width, height);
@@ -242,7 +248,7 @@
 			}
 			var Finish = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				currentSequence = 0;
 				ctx.clearRect(0, 0, width, height);
@@ -262,8 +268,8 @@
 				}
 			}
 
-			$('#start_button').on('click',function(){
-				$('#instructions').hide();
+			$('#start_button__ID').on('click',function(){
+				$('#instructions__ID').hide();
 				$('#participant_div__ID').css("visibility", "hidden");
 				Start();
 			});

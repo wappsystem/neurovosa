@@ -22,6 +22,9 @@
                 if($vm.api_type=="sqlserver")   return record.Subject_ID+' '+record.Subject_Initials; 
                 else                            return record.Data.Subject_ID+' '+record.Data.Subject_Initials; 
             }
+			if(window.location.toString().indexOf('tb=demo')!=-1){
+					$('#D__ID').css('background-image','url("m/demo.png")')
+			}
 			//--------------------------------------------------------
             $('#panel__ID a').on('click',function(e){
                 e.preventDefault();

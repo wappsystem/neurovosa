@@ -31,6 +31,9 @@
                 document.title="Dashboard | "+$vm.default_title;
                 $("meta[name='description']").attr("content","Dashboard");
             }
+			if(window.location.toString().indexOf('tb=demo')!=-1){
+				$('#D__ID').css('background-image','url("m/demo.png")')
+			}
             //--------------------------------------------------------
             $('#panel__ID a').on('click',function(e){
                 e.preventDefault();

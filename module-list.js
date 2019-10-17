@@ -194,14 +194,14 @@
         "neurovosa-b-pre-word-pairs-set1-trial5":	    {url:"$H/m/word-pairs/evening-wordpairs-set1-trial5.html"},
         "neurovosa-b-pre-word-pairs-set1-data":	        {url:"$H/m/library/word-pairs-set1-data.html",Table:"neurovosa-b-pre-word-pairs-set1",form_module:"neurovosa-b-pre-word-pairs-set1-form"},
         "neurovosa-b-pre-word-pairs-set1-form":	        {url:"$H/m/library/word-pairs-set1-form.html",Table:"neurovosa-b-pre-word-pairs-set1"},
-        "neurovosa-b-pre-finger-tapping-data":	        {url:"$H/m/neurocog/finger-tapping-data.html",Table:"neurovosa-b-pre-finger-tapping",form_module:"neurovosa-b-pre-finger-tapping-form"},
-        "neurovosa-b-pre-finger-tapping-form":	        {url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-b-pre-finger-tapping",task_name:"Finger Tapping"},
+        "neurovosa-b-pre-finger-tapping-data":	        {url:"$H/m/neurocog/finger-tapping12-data.html",Table:"neurovosa-b-pre-finger-tapping",form_module:"neurovosa-b-pre-finger-tapping-form"},
+        "neurovosa-b-pre-finger-tapping-form":	        {url:"$H/m/neurocog/finger-tapping12-form.html",Table:"neurovosa-b-pre-finger-tapping",task_name:"Finger Tapping"},
 
         "neurovosa-b-post-word-pairs-set1-morning":	    {url:"$H/m/word-pairs/morning-wordpairs-set1.html"},
         "neurovosa-b-post-word-pairs-set1-data":        {url:"$H/m/library/word-pairs-set1-data.html",Table:"neurovosa-b-post-word-pairs-set1",form_module:"neurovosa-b-post-word-pairs-set1-form"},
         "neurovosa-b-post-word-pairs-set1-form":        {url:"$H/m/library/word-pairs-set1-form.html",Table:"neurovosa-b-post-word-pairs-set1"},
         "neurovosa-b-post-finger-tapping-data":	        {url:"$H/m/neurocog/finger-tapping-data.html",Table:"neurovosa-b-post-finger-tapping",form_module:"neurovosa-b-post-finger-tapping-form"},
-        "neurovosa-b-post-finger-tapping-form":	        {url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-b-pre-finger-tapping",task_name:"Finger Tapping"},
+        "neurovosa-b-post-finger-tapping-form":	        {url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-b-post-finger-tapping",Table2:"neurovosa-b-pre-finger-tapping",task_name:"Finger Tapping"},
 
         "neurovosa-3m-pre-word-pairs-set1-practice":	{url:"$H/m/word-pairs/evening-wordpairs-set1-practice.html"},
         "neurovosa-3m-pre-word-pairs-set1-trial1":	    {url:"$H/m/word-pairs/evening-wordpairs-set1-trial1.html"},
@@ -211,17 +211,23 @@
         "neurovosa-3m-pre-word-pairs-set1-trial5":	    {url:"$H/m/word-pairs/evening-wordpairs-set1-trial5.html"},
         "neurovosa-3m-pre-word-pairs-set1-data":		{url:"$H/m/library/word-pairs-set1-data.html",Table:"neurovosa-3m-pre-word-pairs-set1",form_module:"neurovosa-3m-pre-word-pairs-set1-form"},
         "neurovosa-3m-pre-word-pairs-set1-form":		{url:"$H/m/library/word-pairs-set1-form.html",Table:"neurovosa-3m-pre-word-pairs-set1"},
-        "neurovosa-3m-pre-finger-tapping-data":		    {url:"$H/m/neurocog/finger-tapping-data.html",Table:"neurovosa-3m-pre-finger-tapping",form_module:"neurovosa-3m-pre-finger-tapping-form"},
-        "neurovosa-3m-pre-finger-tapping-form":		    {url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-3m-pre-finger-tapping",task_name:"Finger Tapping"},
+        "neurovosa-3m-pre-finger-tapping-data":		    {url:"$H/m/neurocog/finger-tapping12-data.html",Table:"neurovosa-3m-pre-finger-tapping",form_module:"neurovosa-3m-pre-finger-tapping-form"},
+        "neurovosa-3m-pre-finger-tapping-form":		    {url:"$H/m/neurocog/finger-tapping12-form.html",Table:"neurovosa-3m-pre-finger-tapping",task_name:"Finger Tapping"},
 
         "neurovosa-3m-post-word-pairs-set1-morning":	{url:"$H/m/word-pairs/morning-wordpairs-set1.html"},
         "neurovosa-3m-post-word-pairs-set1-data":		{url:"$H/m/library/word-pairs-set1-data.html",Table:"neurovosa-3m-post-word-pairs-set1",form_module:"neurovosa-3m-post-word-pairs-set1-form"},
         "neurovosa-3m-post-word-pairs-set1-form":		{url:"$H/m/library/word-pairs-set1-form.html",Table:"neurovosa-3m-post-word-pairs-set1"},
         "neurovosa-3m-post-finger-tapping-data":		{url:"$H/m/neurocog/finger-tapping-data.html",Table:"neurovosa-3m-post-finger-tapping",form_module:"neurovosa-3m-post-finger-tapping-form"},
-        "neurovosa-3m-post-finger-tapping-form":		{url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-3m-pre-finger-tapping",task_name:"Finger Tapping"},
+        "neurovosa-3m-post-finger-tapping-form":		{url:"$H/m/neurocog/finger-tapping-form.html",Table:"neurovosa-3m-post-finger-tapping",Table2:"neurovosa-3m-pre-finger-tapping",task_name:"Finger Tapping"},
    }
    for(p in modules){
         $vm.module_list[p]=modules[p];
         $vm.module_list[p].url=$vm.module_list[p].url.replace('$H',$vm.hosting_path);
     }
+    if(window.location.toString().indexOf('tb=demo')!=-1){
+        for(p in $vm.module_list){
+            $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;
+        }
+    }
+
 })();

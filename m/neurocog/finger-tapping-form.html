@@ -1,5 +1,5 @@
 <div id=thirdparty_container__ID>
-	<div id=instructions style="margin: auto; text-align:center;">
+	<div id=instructions__ID style="margin: auto; text-align:center;">
 		<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox ">
 				<div class="row">
 					<div class="col-12">
@@ -13,7 +13,7 @@
 										<input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant"/>
 									</label><br>
 									<label ><span class="">Participant ID</span>
-										<input type=text name="Participant_uid" class=form-control readonly />
+										<input type=text name="Participant_uid" class=form-control  />
 									</label>
 								</fieldset>
 							</div>
@@ -24,12 +24,13 @@
 			</div>
 		<div style='margin-top:50px; font-size:x-large; color:rgba(0,0,255,255)'>Using your non-dominant hand on the numeric keyboard, repeatedly tap the five element sequence shown</div>
 		<div style='font-size:x-large; font-weight:bold; color:rgba(0,0,255,255)'>as quickly and accurately as possible</div>
-		<button id=start_button style="margin-top:20px;" class='btn btn-primary btn-lg'>Start</button>
+		<button id=start_button__ID style="margin-top:20px;" class='btn btn-primary btn-lg'>Start</button>
 	</div>
-	<canvas id=main_canvas width=1100 height=300 style="margin: auto; display: block;"></canvas>
+	<canvas id=main_canvas__ID width=1100 height=300 style="margin: auto; display: block;"></canvas>
 </div>
 <script>
 	function F__ID(){
+		// Ver. 17/10/2019
 		//-------------------------------------
 		VmInclude:__COMPONENT__/f/form.01.js
 		VmInclude:__CURRENT_PATH__/../../library/shared-form.js
@@ -39,6 +40,8 @@
 		var intervals = [];
 		//------------------------------------
 		var this_module=$vm.module_list[$vm.vm['__ID'].name];
+		//Table for previous night test.
+		var tb=this_module.Table2;
 		//------------------------------------
 		$('#D__ID').on('load',function(){
 			$('#header').hide();
@@ -89,7 +92,35 @@
                     data.Correct_3=correct[2];data.Error_3=error[2];data.Time_3=time[2];
                     data.Correct_4=correct[3];data.Error_4=error[3];data.Time_4=time[3];
                     data.Correct_5=correct[4];data.Error_5=error[4];data.Time_5=time[4];
-                    data.Correct_6=correct[5];data.Error_6=error[5];data.Time_6=time[5];
+					data.Correct_6=correct[5];data.Error_6=error[5];data.Time_6=time[5];
+					data.ERLS=((parseInt(correct[0])+parseInt(correct[1])+parseInt(correct[2]))/3).toFixed(1);
+					data.LRLS=((parseInt(correct[3])+parseInt(correct[4])+parseInt(correct[5]))/3).toFixed(1);
+					data.ERES=((parseInt(error[0])+parseInt(error[1])+parseInt(error[2]))/3).toFixed(1);
+					data.LRES=((parseInt(error[3])+parseInt(error[4])+parseInt(error[5]))/3).toFixed(1);
+					data.ERRT=((parseFloat(time[0])+parseFloat(time[1])+parseFloat(time[2]))/3).toFixed(2);
+					data.LRRT=((parseFloat(time[3])+parseFloat(time[4])+parseFloat(time[5]))/3).toFixed(2);
+					if(tb!=undefined){
+						var qry={'Data.Participant_uid':$("input[name='Participant_uid']").val()}
+						var post_learning="";
+						jQuery.ajaxSetup({async:false});
+						$vm.request({cmd:"find-s",table:tb,query:qry,options:{}},function(res){
+							if(res.permission==false){
+								alert("No permission");
+								return;
+							}
+							if(res.result.length==0){
+							}
+							else{
+								post_learning=res.result[0].Data.PoTLS
+								console.log("here: "+JSON.stringify(res.result));
+							}
+						})
+						jQuery.ajaxSetup({async:true});
+						if(post_learning!=''){
+							data.OEI=((parseFloat(data.ERLS)/parseFloat(post_learning))*100).toFixed(1);
+							data.OLI=((parseFloat(data.LRLS)/parseFloat(post_learning))*100).toFixed(1);
+						}
+					}
 		}
 		//------------------------------------
 		var ClearIntervals = function()
@@ -128,10 +159,10 @@
 		}
 		//------------------------------------
 		var third_party=function(containerID,callback){
-			$('#instructions').show();
+			$('#instructions__ID').show();
 			ClearIntervals();
 			$('#'+containerID).css('background-color','#ffffff');
-			var canvas = document.getElementById('main_canvas');
+			var canvas = document.getElementById('main_canvas__ID');
 			var ctx = canvas.getContext('2d');
 
 			var repeats = 6;
@@ -171,7 +202,7 @@
 			ctx.font = '48px arial';
 
 			$(document).keypress(function(e){
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				if (currentSequence > 0 && currentNumber < sequence.length)
 				{
@@ -205,7 +236,7 @@
 
 			var ResetSequence = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				ctx.clearRect(0, 0, width, height);
 				ctx.fillStyle = 'rgb(0,0,102)';
@@ -224,7 +255,7 @@
 
 			var Start = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				repeat++;
 				ctx.clearRect(0, 0, width, height);
@@ -236,7 +267,7 @@
 			}
 			var Finish = function()
 			{
-				if ($("#main_canvas").is(':hidden')) //hacky and ugly way :(
+				if ($("#main_canvas__ID").is(':hidden')) //hacky and ugly way :(
 					return;
 				currentSequence = 0;
 				ctx.clearRect(0, 0, width, height);
@@ -256,8 +287,8 @@
 				}
 			}
 
-			$('#start_button').on('click',function(){
-				$('#instructions').hide();
+			$('#start_button__ID').on('click',function(){
+				$('#instructions__ID').hide();
 				$('#participant_div__ID').css("visibility", "hidden");
 				Start();
 			});
