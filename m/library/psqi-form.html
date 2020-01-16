@@ -849,8 +849,8 @@
                 var v25=$("input[name='PSQI10e']").val();
                 var v26=$("input[name='PSQI10ei']:checked").val();
                 var vpsqi1=0;
-                if(v4>=7) vpsqi1=0;
-                if(v4<7 && v4>=6) vpsqi1=1;
+                if(v4>7) vpsqi1=0;
+                if(v4<=7 && v4>=6) vpsqi1=1;
                 if(v4<6 && v4>=5) vpsqi1=2;
                 if(v4<5) vpsqi1=3;
                 data.PSQIDURAT=vpsqi1.toString();
@@ -897,7 +897,7 @@
                 else {
                     result = endMin - startMin;
                 }
-                v4=parseInt(v4)*60*100;
+                v4=parseFloat(v4)*60*100;
                 var vpsqi4=v4/result;
                 if(vpsqi4>=85) data.PSQIHSE="0";
                 if(vpsqi4<85 && vpsqi4>=75) data.PSQIHSE="1";
