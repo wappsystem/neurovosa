@@ -143,6 +143,9 @@ m.export_records=function(){
                             empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
                         }
                     }
+                    for( var ll=0;ll<export_fields.length;ll++){
+                        empty_item2[export_fields[ll]]="";
+                    }
                     output_data.push(empty_item2)
                 }
             }
