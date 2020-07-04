@@ -63,8 +63,8 @@
 
         "neurovosa-b-pwa-data":		            {url:"$H/m/library/pwa-data.html",Table:"neurovosa-b-pwa",form_module:"neurovosa-b-pwa-form"},
         "neurovosa-b-pwa-form":		            {url:"$H/m/library/pwa-form.html",Table:"neurovosa-b-pwa"},
-        "neurovosa-b-psg300-data":		            {url:"$H/m/library/psg300-data.html",Table:"neurovosa-b-psg300",form_module:"neurovosa-b-psg300-form"},
-        "neurovosa-b-psg300-form":		            {url:"$H/m/library/psg300-form.html",Table:"neurovosa-b-psg300"},
+        "neurovosa-b-psggrr-data":		            {url:"$H/m/library/psggrr-data.html",Table:"neurovosa-b-psggrr",form_module:"neurovosa-b-psggrr-form",task_name:"Baseline - Grael Research PSG Report"},
+        "neurovosa-b-psggrr-form":		            {url:"$H/m/library/psggrr-form.html",Table:"neurovosa-b-psggrr",task_name:"Baseline - Grael Research PSG Report"},
         "neurovosa-b-fina1-data":		            {url:"$H/m/library/finapres-vr-data.html",Table:"neurovosa-b-fina1",form_module:"neurovosa-b-fina1-form"},
         "neurovosa-b-fina1-form":		            {url:"$H/m/library/finapres-vr-form.html",Table:"neurovosa-b-fina1"},
         "neurovosa-b-fina2-data":		            {url:"$H/m/library/finapres-vr-data.html",Table:"neurovosa-b-fina2",form_module:"neurovosa-b-fina2-form"},
@@ -132,8 +132,8 @@
 
         "neurovosa-3m-pwa-data":		            {url:"$H/m/library/pwa-data.html",Table:"neurovosa-3m-pwa",form_module:"neurovosa-3m-pwa-form"},
         "neurovosa-3m-pwa-form":		            {url:"$H/m/library/pwa-form.html",Table:"neurovosa-3m-pwa"},
-        "neurovosa-3m-psg300-data":		            {url:"$H/m/library/psg300-data.html",Table:"neurovosa-3m-psg300",form_module:"neurovosa-3m-psg300-form"},
-        "neurovosa-3m-psg300-form":		            {url:"$H/m/library/psg300-form.html",Table:"neurovosa-3m-psg300"},
+        "neurovosa-3m-psggrr-data":		            {url:"$H/m/library/psggrr-data.html",Table:"neurovosa-3m-psggrr",form_module:"neurovosa-3m-psggrr-form",task_name:"Post 3 Month - Grael Research PSG Report"},
+        "neurovosa-3m-psggrr-form":		            {url:"$H/m/library/psggrr-form.html",Table:"neurovosa-3m-psggrr",task_name:"Post 3 Month - Grael Research PSG Report"},
         "neurovosa-3m-fina1-data":		            {url:"$H/m/library/finapres-vr-data.html",Table:"neurovosa-3m-fina1",form_module:"neurovosa-3m-fina1-form"},
         "neurovosa-3m-fina1-form":		            {url:"$H/m/library/finapres-vr-form.html",Table:"neurovosa-3m-fina1"},
         "neurovosa-3m-fina2-data":		            {url:"$H/m/library/finapres-vr-data.html",Table:"neurovosa-3m-fina2",form_module:"neurovosa-3m-fina2-form"},
