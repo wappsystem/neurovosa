@@ -101,8 +101,8 @@
         "neurovosa-b-post-stroop-text-form":		    {url:"$H/m/neurocog/stroop-text-form.html",Table:"neurovosa-b-post-stroop-text",task_name:"Stroop Text"},
         "neurovosa-b-post-stroop-colour-data":		{url:"$H/m/neurocog/stroop-colour-data.html",Table:"neurovosa-b-post-stroop-colour",form_module:"neurovosa-b-post-stroop-colour-form"},
         "neurovosa-b-post-stroop-colour-form":		{url:"$H/m/neurocog/stroop-colour-form.html",Table:"neurovosa-b-post-stroop-colour",task_name:"Stroop Colour"},
-        "neurovosa-b-post-lct-data":		            {url:"$H/m/neurocog/lct-data.html",Table:"neurovosa-b-post-lct",form_module:"neurovosa-b-post-lct-form"},
-        "neurovosa-b-post-lct-form":		            {url:"$H/m/neurocog/lct-form.html",Table:"neurovosa-b-post-lct",task_name:"LCT"},
+        "neurovosa-b-post-lct-data":		            {url:"$H/m/neurocog/letter-cancellation-data.html",Table:"neurovosa-b-post-lct",form_module:"neurovosa-b-post-lct-form"},
+        "neurovosa-b-post-lct-form":		            {url:"$H/m/neurocog/letter-cancellation-form.html",Table:"neurovosa-b-post-lct",task_name:"LCT"},
         "neurovosa-b-post-ess-data":		            {url:"$H/m/library/ess-data.html",Table:"neurovosa-b-post-ess",form_module:"neurovosa-b-post-ess-form"},
         "neurovosa-b-post-ess-form":		            {url:"$H/m/library/ess-form.html",Table:"neurovosa-b-post-ess",task_name:"ESS"},
         "neurovosa-b-post-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"neurovosa-b-post-isi",form_module:"neurovosa-b-post-isi-form"},
@@ -170,8 +170,8 @@
         "neurovosa-3m-post-stroop-text-form":		    {url:"$H/m/neurocog/stroop-text-form.html",Table:"neurovosa-3m-post-stroop-text",task_name:"Stroop Text"},
         "neurovosa-3m-post-stroop-colour-data":		    {url:"$H/m/neurocog/stroop-colour-data.html",Table:"neurovosa-3m-post-stroop-colour",form_module:"neurovosa-3m-post-stroop-colour-form"},
         "neurovosa-3m-post-stroop-colour-form":		    {url:"$H/m/neurocog/stroop-colour-form.html",Table:"neurovosa-3m-post-stroop-colour",task_name:"Stroop Colour"},
-        "neurovosa-3m-post-lct-data":		            {url:"$H/m/neurocog/lct-data.html",Table:"neurovosa-3m-post-lct",form_module:"neurovosa-3m-post-lct-form"},
-        "neurovosa-3m-post-lct-form":		            {url:"$H/m/neurocog/lct-form.html",Table:"neurovosa-3m-post-lct",task_name:"LCT"},
+        "neurovosa-3m-post-lct-data":		            {url:"$H/m/neurocog/letter-cancellation-data.html",Table:"neurovosa-3m-post-lct",form_module:"neurovosa-3m-post-lct-form"},
+        "neurovosa-3m-post-lct-form":		            {url:"$H/m/neurocog/letter-cancellation-form.html",Table:"neurovosa-3m-post-lct",task_name:"LCT"},
         "neurovosa-3m-post-ess-data":		            {url:"$H/m/library/ess-data.html",Table:"neurovosa-3m-post-ess",form_module:"neurovosa-3m-post-ess-form"},
         "neurovosa-3m-post-ess-form":		            {url:"$H/m/library/ess-form.html",Table:"neurovosa-3m-post-ess",task_name:"ESS"},
         "neurovosa-3m-post-isi-data":		            {url:"$H/m/library/isi-data.html",Table:"neurovosa-3m-post-isi",form_module:"neurovosa-3m-post-isi-form"},
@@ -229,10 +229,10 @@
         $vm.module_list[p]=modules[p];
         $vm.module_list[p].url=$vm.module_list[p].url.replace('$H',$vm.hosting_path);
     }
-    if(window.location.toString().indexOf('tb=demo')!=-1){
+    //if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
             $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;
         }
-    }
+    //}
 
 })();
