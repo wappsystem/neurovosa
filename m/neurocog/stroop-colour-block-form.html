@@ -292,9 +292,6 @@
 					results.ResponseColour = results.ResponseColour.replace(/red/g,"RED").replace(/lime/g,"GREEN").replace(/blue/g,"BLUE");
 					callback(results);
 				}
-			}
-			$('#start_button__ID').on('click',function(){
-				$('#instructions__ID').hide();
                 results = {
                     Result : [],
                     IndivRT : [],
@@ -303,6 +300,9 @@
                     ResponseColour : [],
                     StartTime : ""
                 };
+			}
+			$('#start_button__ID').on('click',function(){
+				$('#instructions__ID').hide();
 				Start();
 			});
 			function getXY(canvas, event)
