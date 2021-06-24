@@ -1,0 +1,21 @@
+<section>
+    VmInclude:__CURRENT_PATH__/../../library/grid.v1h.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/../../library/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text('N-Back 2')
+        //-------------------------------------
+		var fields="NBACK,NGTA,NGRT,GMRT,NTCR,NTIC,NMIS,NMRT,MRTCM,MRTCN,SDCR,SDCM,SDCN,MdRTCR,MdRTCM,MnRTCR,MxRTCR,MF10CR,MS10CR,SDF10CR,SDS10CR,NTCM,NTCN,NTFM,NTFN,NTWR,NNO,NRT,NAC";
+		fields+=",NGTA2,NGRT2,GMRT2,NTCR2,NTIC2,NMIS2,NMRT2,MRTCM2,MRTCN2,SDCR2,SDCM2,SDCN2,MdRTCR2,MdRTCM2,MnRTCR2,MxRTCR2,MF10CR2,MS10CR2,SDF10CR2,SDS10CR2,NTCM2,NTCN2,NTFM2,NTFN2,NTWR2,NNO2,NRT2,NAC2";
+		fields+=",NGTA3,NGRT3,GMRT3,NTCR3,NTIC3,NMIS3,NMRT3,MRTCM3,MRTCN3,SDCR3,SDCM3,SDCN3,MdRTCR3,MdRTCM3,MnRTCR3,MxRTCR3,MF10CR3,MS10CR3,SDF10CR3,SDS10CR3,NTCM3,NTCN3,NTFM3,NTFN3,NTWR3,NNO3,NRT3,NAC3";
+        m.fields="_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+</style>
