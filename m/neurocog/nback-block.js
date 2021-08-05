@@ -475,8 +475,18 @@ var calc3=function(datax){
                 return;
             }
             else { 
-                $vm.refresh=1;
-                window.history.go(-1);
+                counter=0;
+                $('#main_canvas__ID').hide();
+                $('#dot_div__ID').show();
+                var i = setInterval(function(){
+                    counter++;
+                    if(counter >= delay_timer_start) {
+                        $('#dot_div__ID').hide();
+                        clearInterval(i);
+                        $vm.refresh=1;
+                        window.history.go(-1);
+                    }
+                }, 1000);
             }
         });
     }
