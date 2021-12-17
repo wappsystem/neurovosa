@@ -165,15 +165,15 @@
             //-------------------------------------
             var before_submit=m.before_submit;
             m.before_submit=function(data,index){
-                if($("input[name='Morning_Recall_Total']").val()!='' || $("input[name='Evening_Recall_Total']").val()!=undefined){
+                if($("input[name='Morning_Recall_Total']").val()!='' && $("input[name='Evening_Recall_Total']").val()!=undefined){
                     data.Recall_Change_Total=(parseInt($("input[name='Morning_Recall_Total']").val())-parseInt($("input[name='Evening_Recall_Total']").val())).toFixed(1);
                     data.Overnight_Retention_Total=((parseInt($("input[name='Morning_Recall_Total']").val())/parseInt($("input[name='Evening_Recall_Total']").val()))*100).toFixed(1);
                 }
-                if($("input[name='Morning_Related_Recall']").val()!='' || $("input[name='Evening_Related_Recall']").val()!=undefined){
+                if($("input[name='Morning_Related_Recall']").val()!='' && $("input[name='Evening_Related_Recall']").val()!=undefined){
                     data.Recall_Change_Related=(parseInt($("input[name='Morning_Related_Recall']").val())-parseInt($("input[name='Evening_Related_Recall']").val())).toFixed(1);
                     data.Overnight_Retention_Related=((parseInt($("input[name='Morning_Related_Recall']").val())/parseInt($("input[name='Evening_Related_Recall']").val()))*100).toFixed(1);
                 }
-                if($("input[name='Morning_Unrelated_Recall']").val()!='' || $("input[name='Evening_Unrelated_Recall']").val()!=undefined){
+                if($("input[name='Morning_Unrelated_Recall']").val()!='' && $("input[name='Evening_Unrelated_Recall']").val()!=undefined){
                     data.Recall_Change_Unrelated=(parseInt($("input[name='Morning_Unrelated_Recall']").val())-parseInt($("input[name='Evening_Unrelated_Recall']").val())).toFixed(1);
                     data.Overnight_Retention_Unrelated=((parseInt($("input[name='Morning_Unrelated_Recall']").val())/parseInt($("input[name='Evening_Unrelated_Recall']").val()))*100).toFixed(1);
                 }
