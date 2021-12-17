@@ -1,0 +1,192 @@
+<div id=D__ID>
+	<!--third html start -->
+	<div class="container mt-95 mb-3">
+		<div class="row">
+			<!-- form container start -->
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+				<div class="row">
+					<div class="col-12">
+						<!-- form start -->
+						<form id="F__ID">
+							<h3 id=title__ID></h3>
+							<!-- participant part for all tsak forms -------------------->
+							<div id="participant_div__ID">
+								<div class="form-group">
+									<fieldset class="subquestions">
+										<label><span class="">Participant</span>
+											<input type=text name="Participant" class=form-control id=Participant__ID
+												data-id="Participant" />
+										</label><br>
+										<label><span class="">Participant ID</span>
+											<input type=text name="Participant_uid" class=form-control readonly />
+										</label>
+									</fieldset>
+								</div>
+							</div>
+							<!-- form group -->
+                            <div class="row px-4">
+								<div class='col'>
+									<span>File</span>
+									<div class="form-control">
+										<u style='cursor:pointer' id=link_File_Name__ID></u>
+										<br>
+										<input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp
+										<button type="button" id=x_File_Name__ID>Remove</button>
+									</div>
+								</div>
+							</div>
+                            <div class="form-group">
+                                <h3>Evening</h3>	
+                            </div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Trial 1 Score</span><input type=number step=0.1 class=form-control name=Trial_1_Score></label></div>
+											<div class="col-sm-4"><label><span class="">Trial 2 Score</span><input type=number step=0.1 class=form-control name=Trial_2_Score></label></div>
+											<div class="col-sm-4"><label><span class="">Trial 3 Score</span><input type=number step=0.1 class=form-control name=Trial_3_Score></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Evening Recall Total</span><input type=number step=0.1 class=form-control name=Evening_Recall_Total></label></div>
+											<div class="col-sm-4"><label><span class="">Evening Related Recall</span><input type=number step=0.1 class=form-control name=Evening_Related_Recall></label></div>
+											<div class="col-sm-4"><label><span class="">Evening Unrelated Recall</span><input type=number step=0.1 class=form-control name=Evening_Unrelated_Recall></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+                                <h3>Morning</h3>
+                            </div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Morning Recall</span><input type=number step=0.1 class=form-control name=Morning_Recall></label></div>
+											<div class="col-sm-4"><label><span class="">Morning Recognition</span><input type=number step=0.1 class=form-control name=Morning_Recognition></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Morning Recall Total</span><input type=number step=0.1 class=form-control name=Morning_Recall_Total></label></div>
+											<div class="col-sm-4"><label><span class="">Morning Related Recall</span><input type=number step=0.1 class=form-control name=Morning_Related_Recall></label></div>
+											<div class="col-sm-4"><label><span class="">Morning Unrelated Recall</span><input type=number step=0.1 class=form-control name=Morning_Unrelated_Recall></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Morning Related Recognition</span><input type=number step=0.1 class=form-control name=Morning_Related_Recognition></label></div>
+											<div class="col-sm-4"><label><span class="">Morning Unrelated Recognition</span><input type=number step=0.1 class=form-control name=Morning_Unrelated_Recognition></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+                                <h3>Scores Automatically Calculated</h3>
+                            </div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Recall raw change score total</span><input type=number step=0.1 class=form-control name=Recall_Change_Total></label></div>
+											<div class="col-sm-4"><label><span class="">Recall raw change score for related words</span><input type=number step=0.1 class=form-control name=Recall_Change_Related></label></div>
+											<div class="col-sm-4"><label><span class="">Recall raw change score for unrelated words</span><input type=number step=0.1 class=form-control name=Recall_Change_Unrelated></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class="">
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Overnight % retention for total words</span><input type=number step=0.1 class=form-control name=Overnight_Retention_Total></label></div>
+											<div class="col-sm-4"><label><span class="">Overnight % retention for related words</span><input type=number step=0.1 class=form-control name=Overnight_Retention_Related></label></div>
+											<div class="col-sm-4"><label><span class="">Overnight % retention for unrelated words</span><input type=number step=0.1 class=form-control name=Overnight_Retention_Unrelated></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            <div class="form-group">
+                                <div class="pb-3">
+                                    <label><span>Set Status</span></label>
+                                    <fieldset class="">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FF0000">
+                                            <span class="checkmark"
+                                                style="background-color:#FF0000"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FFCC00">
+                                            <span class="checkmark"
+                                                style="background-color:#FFCC00"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#00FF00">
+                                            <span class="checkmark"
+                                                style="background-color:#00FF00"></span>Manually&nbsp;&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="" checked>
+                                            <span class="checkmark"
+                                                style="background-color:#C9C9C9"></span>Automatically</label>
+                                    </fieldset>
+                                </div>
+                            </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    VmInclude:__COMPONENT__/m/model.01.html
+	<script>
+		function F__ID(){
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: __CURRENT_PATH__/shared-form.js
+			//-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+				m.set_file_link("File_Name");
+				$('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+            }
+            //-------------------------------------
+            var before_submit=m.before_submit;
+            m.before_submit=function(data,index){
+                if($("input[name='Morning_Recall_Total']").val()!='' || $("input[name='Evening_Recall_Total']").val()!=undefined){
+                    data.Recall_Change_Total=(parseInt($("input[name='Morning_Recall_Total']").val())-parseInt($("input[name='Evening_Recall_Total']").val())).toFixed(1);
+                    data.Overnight_Retention_Total=((parseInt($("input[name='Morning_Recall_Total']").val())/parseInt($("input[name='Evening_Recall_Total']").val()))*100).toFixed(1);
+                }
+                if($("input[name='Morning_Related_Recall']").val()!='' || $("input[name='Evening_Related_Recall']").val()!=undefined){
+                    data.Recall_Change_Related=(parseInt($("input[name='Morning_Related_Recall']").val())-parseInt($("input[name='Evening_Related_Recall']").val())).toFixed(1);
+                    data.Overnight_Retention_Related=((parseInt($("input[name='Morning_Related_Recall']").val())/parseInt($("input[name='Evening_Related_Recall']").val()))*100).toFixed(1);
+                }
+                if($("input[name='Morning_Unrelated_Recall']").val()!='' || $("input[name='Evening_Unrelated_Recall']").val()!=undefined){
+                    data.Recall_Change_Unrelated=(parseInt($("input[name='Morning_Unrelated_Recall']").val())-parseInt($("input[name='Evening_Unrelated_Recall']").val())).toFixed(1);
+                    data.Overnight_Retention_Unrelated=((parseInt($("input[name='Morning_Unrelated_Recall']").val())/parseInt($("input[name='Evening_Unrelated_Recall']").val()))*100).toFixed(1);
+                }
+                console.log(JSON.stringify(data))
+                return before_submit(data,index);
+            }
+		}
+	</script>
+    <style>
+		#D__ID .mt-95 {
+			max-width: 800px;
+		}
+
+		VmInclude:__CURRENT_PATH__/wappsystem-form.css
+	</style>
+</div>
