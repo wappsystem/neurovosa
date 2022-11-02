@@ -47,14 +47,6 @@
             VmInclude: '__COMPONENT__/f/form.01.js'
             VmInclude: __CURRENT_PATH__/shared-form.js
             //-------------------------------------
-            $('#F__ID input[name=Height]').on('change', function () { cal(); })
-            $('#F__ID input[name=Weight]').on('change', function () { cal(); })
-            var cal = function () {
-                var h = $('#F__ID input[name=Height]').val() / 100;
-                var w = $('#F__ID input[name=Weight]').val();
-                var b = (w / (h * h)).toFixed(2);
-                $('#F__ID input[name=BMI]').val(b);
-            }
             //-------------------------------------
 
         }
