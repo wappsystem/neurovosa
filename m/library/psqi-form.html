@@ -855,7 +855,7 @@
                 if(v4<5) vpsqi1=3;
                 data.PSQIDURAT=vpsqi1.toString();
                 var pqsi5j=0;
-        		if(v14=='') pqsi5j=0; else pqsi5j=v15;
+        		if(v14=='' || v14 == undefined) pqsi5j=0; else pqsi5j=v15;
 		        var vpsqi2=parseInt(v6)+parseInt(v7)+parseInt(v8)+parseInt(v9)+parseInt(v10)+parseInt(v11)+parseInt(v12)+parseInt(v13)+parseInt(pqsi5j);
                 if(vpsqi2==0) data.PSQIDISTB="0";
                 if(vpsqi2>=1 && vpsqi2<=9) data.PSQIDISTB="1";
